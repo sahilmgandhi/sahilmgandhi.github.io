@@ -57,8 +57,9 @@
 /* Header */
 
 	#header {
-		background-image: image("images/ucla.jpg");
+		background-image: url("images/ucla.jpg");
 		background-repeat: no-repeat;
+        width: 100%;
 		background-size: cover;
 		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
 	}
