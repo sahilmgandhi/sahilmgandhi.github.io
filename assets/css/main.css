@@ -2090,7 +2090,11 @@
 				border-radius: 100%;
 				width: 100%;
 			}
-
+        .centerImage
+        {
+            display: block;
+            margin: 0 auto;
+        }
 /* List */
 
 	ol {
