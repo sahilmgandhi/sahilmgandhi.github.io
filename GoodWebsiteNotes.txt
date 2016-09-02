@@ -1,0 +1,8 @@
+To change background colors:
+
+Wrapper style1, 2, and 3 in main.css ... change the background-color property
+
+#menu background to change that color.
+
+
+In the future: add reltio, intellivision, and more.
