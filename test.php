@@ -28,7 +28,7 @@
 										<ul>
 											<li><a href="index.html">Back to my website</a></li>
                                             <li><a href="tvShows.html">My TV Show Reviews</a></li>
-                                            <li><a href="test.php">9's</a></li>
+                                            <li><a href="#nines">9's</a></li>
                                             <li><a href=""></a></li>
 										</ul>
 									</div>
