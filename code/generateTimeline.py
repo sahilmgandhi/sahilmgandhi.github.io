@@ -15,7 +15,7 @@ counter = 0
 with open(args.fileName, 'r') as movies:
     movieEntries = csv.reader(movies)
     outputFile.write("<div id=\"9\">")
-    outputFile.write("<div id=\"ratingsBanner\"><h2>%d.00/10 - %d/10</h2>\n</div>" % (currRating, (currRating + 1)))
+    outputFile.write("<div id=\"ratingsBanner\"><h2>%d.00/10 - %d/10</h2></div>" % (currRating, (currRating + 1)))
     for row in movieEntries:
         if int(float(row[0])) < currRating:
             currRating = int(float(row[0]))
