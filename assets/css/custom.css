@@ -19,7 +19,7 @@
 
 /* Container around content */
 .container {
-    padding: 15px 20px;
+    padding: 5px 20px;
     position: relative;
     background-color: inherit;
     width: 50%;
@@ -84,16 +84,17 @@
 
 /* The actual content */
 .timelineContent {
-    padding: 5px 5px;
+    padding: 20px 15px;
     background-color: royalblue;
     position: relative;
     border-radius: 6px;
+    height: inherit;
 }
 
 #ratingsBanner {
     padding: 15px 15px;
     z-index: 1;
-    background-color: royalblue;
+    background-color: #2D6FD2;
     position: relative;
     border-radius: 100px;
     width: inherit;
