@@ -5,14 +5,15 @@ import random, sys, string, csv, argparse
 parser=argparse.ArgumentParser(
     description='''This script generates the HTML code for the timeline boxes''',
     epilog="""Have fun!""")
-parser.add_argument('-f', default='movies.csv', dest='fileName', help='Name of the csv file. Default is movies.csv')
+parser.add_argument('-i', default='movies.csv', dest='inputFile', help='Name of the csv file. Default is movies.csv')
+parser.add_argument('-o', default='reviews.txt', dest='outputFile', help='Name of the output file. Default is reviews.txt')
 args=parser.parse_args()
 
-outputFile = open('reviews.txt', 'w')
+outputFile = open(args.outputFile, 'w')
 currRating = 9
 counter = 0
 
-with open(args.fileName, 'r') as movies:
+with open(args.inputFile, 'r') as movies:
     movieEntries = csv.reader(movies)
     outputFile.write("<div id=\"9\">")
     outputFile.write("<div id=\"ratingsBanner\"><h2>%d.00/10 - %d/10</h2></div>" % (currRating, (currRating + 1)))
