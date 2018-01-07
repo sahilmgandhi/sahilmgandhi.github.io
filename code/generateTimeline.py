@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import random, sys, string, csv, argparse
+import random, sys, string, csv, argparse, subprocess
 
 parser=argparse.ArgumentParser(
     description='''This script generates the HTML code for the timeline boxes''',
@@ -12,6 +12,14 @@ args=parser.parse_args()
 outputFile = open(args.outputFile, 'w')
 currRating = 9
 counter = 0
+
+htmlFile = 'movieReviews.html'
+htmlEndingLine = 112
+htmlDesiredLine = 74
+
+if args.outputFile != 'reviews.txt':
+    htmlFile
+
 
 with open(args.inputFile, 'r') as movies:
     movieEntries = csv.reader(movies)
@@ -36,3 +44,7 @@ with open(args.inputFile, 'r') as movies:
         outputFile.write("</div></div>")
         counter += 1
     outputFile.write("</div>")
+
+subprocess.call('sed -i \'/.*<div id="9">.*/d\' ../movieReviews.html', shell=True)
+subprocess.call('cat %s >> ../movieReviews.html' % args.outputFile, shell=True)
+subprocess.call('printf \'112m74\nw\n\' | ed ../movieReviews.html', shell=True)
