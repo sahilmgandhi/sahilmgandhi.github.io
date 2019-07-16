@@ -1,3 +1,4 @@
+
 \documentclass[letterpaper,10.8pt]{article}
 
 \usepackage{latexsym}
@@ -9,7 +10,13 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
-
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -18,8 +25,8 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1in}
@@ -45,7 +52,7 @@
 
 \newcommand{\resumeItemNoBullet}[2]{
   \item[$ $]\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1:}{ #2 \vspace{-2pt}}
   }
 }
 
@@ -68,11 +75,18 @@
     \end{tabular*}
   \vspace{-7pt}
 }
+\newcommand{\resumeSubheadingActivityCustom}[3]{
+  \vspace{-2pt}\item[$ $]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1:} #2 & \textbf{\small #3} \\
+    \end{tabular*}
+  \vspace{-7pt}
+}
 
 \newcommand{\resumeSubheading}[3]{
   \vspace{-2pt}\item[$ $]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1}, \small #2 & \small #3 \\
+      \textbf{#1}, \textit{\small #2} & \textbf{\small #3} \\
     \end{tabular*}
   \vspace{-7pt}
 }
@@ -81,8 +95,8 @@
   \vspace{-2pt}\item[$ $]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \\
-      \small#2 & \small #3 \\
-      \small#4 & \small #5 \\
+      \small#2 & \textbf{\small #3} \\
+      \small#4 & \textbf{\small #5} \\
     \end{tabular*}
   \vspace{-5pt}
 }
@@ -104,116 +118,143 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\LARGE Wenlong Xiong}} 
-  & \small{\href{mailto:wenlongx@gmail.com}{wenlongx@ucla.edu}} \\
-  & \small{+1 (650) 862-9170} \\
-  & \small{\href{https://github.com/wenlongx}{github.com/wenlongx}} \\
+  \textbf{{\LARGE Sahil Gandhi}} & \small{\href{mailto:wenlongx@gmail.com}{sahilmgandhi@gmail.com}} \\
+  \small{\href{https://linkedin.com/in/sahilmgandhi}{linkedin.com/sahilmgandhi}}& \small{\href{https://github.com/sahilmgandhi}{github.com/sahilmgandhi}} \\
+  \small{\href{https://sahilmgandhi.com}{sahilmgandhi.com}} & \small{+1 (408) 806-4768} \\
 \vspace{-10pt}
 \end{tabular*}
-\vspace{-20pt}
-
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{{\LARGE Wenlong Xiong}}
-% \end{tabular*}
+\vspace{-10pt}
 
 %-----------EDUCATION-----------------
 \section{Education}
 \resumeSubHeadingListStart
     \resumeSubheadingTwo
       {University of California, Los Angeles}
-      {M.S. Computer Science;  GPA: 3.93}{Sep 2018 - Current}
-      {B.S. Computer Science;  GPA: 3.73 (\textit{Cum Laude})}{Sep 2014 - Jun 2018}
+      {M.S. Computer Science;  GPA: 4.00}{Apr 2019 - Jun 2020}
+      {B.S. Computer Science and Engineering;  GPA: 3.87 (\textit{Magna Cum Laude})}{Sep 2015 - Mar 2019}
     
-    \resumeSubItem{Selected Coursework}{Big Data Systems \textit{(IP)}, Computational Genetics, Computer Networking,\\Computer Vision, Large Scale Data Mining, Machine Learning Algorithms, Natural Language Processing,\\Convolutional Neural Networks and Deep Learning, Neural Signal Processing, Reinforcement Learning}
+    \resumeSubItem{Selected Coursework}{Big Data Systems \textit{(IP)}, Computer Security \textit{(IP)}, Parallel and Distributed Computing, Data Structures, Algorithms, Operating Systems, Computer Networking, Databases, Machine Learning, ML in Hardware}
 
 \resumeSubHeadingListEnd
 
 %--------PROGRAMMING SKILLS------------
 \section{Skills Summary}
 \resumeSubHeadingListStart
-	\resumeSubItem{Programming Languages}{Python, C++, C, Bash, C\#, Javascript, Lisp, R}
-	\resumeSubItem{Technologies}{Tensorflow, Pytorch, Theano, Docker, Jenkins, Apache Kafka, Apache Aurora, Redis}
+	\resumeSubItem{Programming Languages}{Java, Python, C++, C, C\#, Javascript, Verilog, Bash, Hack}
+	\resumeSubItem{Technologies}{Ansible, OpenTSDB, RocksDB, Protobuf, Docker, Jenkins, Git, Mercurial, UNIX, Autodesk Eagle}
 \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
-\section{Experience}
+\section{Work Experience}
 \resumeSubHeadingListStart
     \resumeSubheading
-    {Microsoft}{Software Engineering Intern}{Jun 2019 - Current}
+    {Microsoft}{Software Engineering Intern}{Jun 2019 - Sep 2019}
     \resumeItemListStart
-        \resumeItemOne{Exposed portions of the Azure Instance Metadata Service API to Azure Stack hybrid cloud\\environments, and refactored Azure Stack services to reuse components from Azure.}
+        \resumeItemOne{Revamped logging infrastructure in distributed build tool to use ProtoBuf schemas for forward/backwards compatibility}
+        \resumeItemOne{Implemented a "caching" feature for important log data in RocksDB to speed up log file analyzers by more than 500\%, allowing software engineers in Windows and Office to gain insights to optimize their distributed builds further}
     \resumeItemListEnd
     
     \resumeSubheading
-    {Bloomberg}{Software Engineering Intern}{Jun 2018 - Sep 2018}
+    {UCLA ScAi Lab}{Undergraduate/Graduate Researcher}{Jan 2018 - Jun 2019}
     \resumeItemListStart
-        \resumeItemOne{Wrote an event ingestion service using Kafka for Instant Bloomberg Chat that checks permissions\\and filters every message sent from Bloomberg terminals in real time.}
-        \resumeItemOne{Created Python utility library around Apache Kafka that multiple services in the IB Chat team\\use to read from and write to Kafka topics.}
-        % \resumeItemOne{Advocated for the quicker adoption of Python 3 features in new services (dataclasses, static type checking, f-strings, etc).}
+        \resumeItemOne{Researched under Dr. Zaniolo and Ariyam Das on real-time streaming DBs, NLP Datalog parsers, and
+        graph visualizations}
+        \resumeItemOne{Built an n-ary And-Or tree parser for faster querying, an NLP tool to parse Datalog and Python profilers for HAT trees}
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Facebook}{Software Engineering Intern}{Jun 2018 - Sep 2018}
+    \resumeItemListStart
+        \resumeItemOne{Merged functionalities for the automated testing tool to enable automated re-testing and move to the new CI/CT pipeline}
+        \resumeItemOne{Optimized the DB design to speed queries and the validation portal UI by more than 50\%, and automated the creation and updates of test results: saving the org over \$300,000 a year in man-hours}
+    \resumeItemListEnd
+  
+    \resumeSubheading
+    {ViaSat}{Software Engineering Intern}{Jun 2017 - Sep 2017}
+    \resumeItemListStart
+        \resumeItemOne{Created infrastructure using Docker and Apache Flume to grab data from airplane routers, and automated it using Ansible}
+        \resumeItemOne{Used Scala and OpenTSDB to process and store data to later visualize in Grafana and make critical business decisions}
     \resumeItemListEnd
     
     \resumeSubheading
-    {Geschwind Lab}{Undergraduate Researcher}{Apr 2017 - Dec 2017}
+    {Reltio}{Software Engineering Intern}{Jun 2016 - Aug 2016}
     \resumeItemListStart
-        \resumeItemOne{Implemented autoencoder neural network in Python using Theano and Lasagne to perform\\classification and denoising on gene expression data.}
-        \resumeItemOne{Investigated novel network architecture that used adversarial networks together with autoencoders\\to reduce batch error in biological data.}
+        \resumeItemOne{Developed and modified API features (Java, Cassandra, Elasticsearch) and fixed major bugs in code base before releases}
+        \resumeItemOne{Gained a critical understanding of the PaaS model and used Git extensively to collaborate
+with developers around the world}
     \resumeItemListEnd
     
     \resumeSubheading
-    {Hulu}{Software Development Intern}{Jun 2017 - Sep 2017}
+    {SmartMonitor and IntelliVision}{Software and Product Development Intern}{Jun 2014 - Aug 2014}
     \resumeItemListStart
-        \resumeItemOne{Created internal Python testing tool to generate headless web clients using Apache Aurora that\\would perform stress and soak tests on the Hulu Live TV service, and generate logs using NewRelic.}
-    \resumeItemListEnd
-    
-    \resumeSubheading
-    {Texas Instruments}{Product Marketing Intern}{Jun 2016 - Sep 2016}
-    \resumeItemListStart
-        \resumeItemOne{Wrote Energia library in C/C++ to provide software support for newly released 4G LTE Evaluation\\Kit (EVK4) by Telit Communications.}
-        % \resumeItemOne{Created motion tracker using Open CV for 2016 TI Intern Design Challenge.}
-    \resumeItemListEnd
-    
-    \resumeSubheading
-    {VCLA Research Center}{Undergraduate Researcher}{Jul 2015 - Sep 2015}
-    \resumeItemListStart
-        \resumeItemOne{Wrote Python scripts to generate 3D Maya models for robot arm trajectory error checking.}
-        \resumeItemOne{ICRA 2016 Paper: "Robot Learning with a Spatial, Temporal, and Causal And-Or Graph"}
+        \resumeItemOne{Concurrently interned at two companies: created a new internal website for IntelliVision and designed/analyzed a prototype medical patch for SmartMonitor to pitch to larger bio-tech firms like Genentech}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
-\section{Activities}
+\section{Personal Projects}
 \resumeSubHeadingListStart
-    \resumeSubheadingActivity
-    {Teaching Assistant at UCLA Engineering}{ENGR112 (Fall 2018, Spring 2019), ENGR111 (Winter 2019)}{Sep 2018 - Jun 2019}
-    \resumeItemListStart
-        \resumeItemOne{Assisted in preparing course materials, grading and assigning homeworks, proctoring exams, hosting\\discussion sections and office hours, and teaching review sessions.}
-    \resumeItemListEnd
 
-    \resumeSubheadingActivity
-    {UCLA IEEE Student Branch}{External Vice President (2016-2018), Treasurer (2015)}{Jul 2015 - May 2018}
-    \resumeItemListStart
-        \resumeItemOne{Communicated with UCLA Electrical Engineering department and engineering clubs to host school\\wide events, maintain corporate connections, secure funding, and shape the organization's direction.}
-        \resumeItemOne{Managed organization's finances and approved over \$25k of purchases.}
-    \resumeItemListEnd
-    
-    \resumeSubheadingActivity
-    {Startup Fair LA (previously Bruin Startup Fair)}{Event Organizer (2016), Sponsorship Team Lead (2015)}{Aug 2015 - Dec 2016}
-    \resumeItemListStart
-        \resumeItemOne{Organized 2 bi-annual startup-focused career fairs, each with over 35 participating companies and\\3 corporate recruiting information sessions.}
-    \resumeItemListEnd
-    
-    % \resumeSubheading
-    \resumeSubheadingActivity
-    {UCLA Upsilon Pi Epsilon}{Design Chair}{Nov 2015 - Jun 2016}
-    
+  \resumeSubItem
+  {Trivia Bot}{Created an automated python bot to help beat trivia games like HQ Trivia, Beat the Q, and more}
+
+  \resumeSubItem
+  {Micromouse}{Designed the PCB and programmed the MCU for an award winning autonomous maze solving robot}
+
+  \resumeSubItem
+  {Free Throw Classifier}{Created a classifier for basketball free throws using three Hexiwears mounted on a participant's arm}
+
+  \resumeSubItem
+  {Bruin Dining Backend}{Published an API endpoint to grab various information about UCLA dining items}
+
+  \resumeSubItem
+  {C.A.R.M.}{Published a Chrome extension for users to message anyone else on the same website}
+
+  \resumeSubItem
+  {REM.my}{Published an Android application to optimize sleep for those with dynamic sleep schedules}
+
 \resumeSubHeadingListEnd
 
-% %-----------Awards-----------------
-% \section{Publications}
-% \resumeSubHeadingListStart
-% 	\resumeSubItem{Robot Learning with a Spatial, Temporal, and Causal And-Or Graph}{DOI:10.1109/ICRA.2016.7487364}
-% \resumeSubHeadingListEnd
+%-----------Awards-----------------
+\section{Awards}
+\resumeSubHeadingListStart
+  \resumeSubheadingActivityCustom 
+    {California Micromouse Comp (CAMM)}{2nd place in 2018 and 1st place in 2019}{May 2018, May 2019}
+  
+  \resumeSubheadingActivityCustom
+  {All American Micromouse Comp (AAMC)}{2nd place in 2018 and 2019}{May 2018, May 2019}
+  
+  \resumeSubheadingActivityCustom
+  {Idea Hacks (Hardware Hackathon) 2018}{Top 10 overall amongst 40 teams}{Jan 2018}
+  
+  \resumeSubheadingActivityCustom
+  {UC San Diego Hacks 2017}{1st place in the Genome Link Category}{Oct 2017}
+  
+  \resumeSubheadingActivityCustom
+  {UC San Diego Hacks 2016}{1st place in the ViaSat Category}{Oct 2016}
+  
+\resumeSubHeadingListEnd
+
+%-----------ACTIVITIES-----------------
+\section{Activities}
+\resumeSubHeadingListStart
+    \resumeSubheadingActivityCustom
+    {Teaching Assistant at UCLA CS}{CS M51a - Logic Design of Digital Systems (Fall 2019)}{2019}
+
+    \resumeSubheadingActivityCustom
+    {UCLA IEEE}{PM ('18-'19), Workshops Manager ('17-'18), OPS Lead ('16-'17), Member ('15-'20)}{2015-2020}
+
+    \resumeSubheadingActivityCustom
+    {UCLA Eta Kappa Nu}{Membership Chair ('17-'18), Member ('17-'20)}{2017-2020}
+
+    \resumeSubheadingActivityCustom
+    {UCLA Tau Beta Pi}{Club Liaison ('17-'18), Member ('17-'20)}{2017-2020}
+
+    \resumeSubheadingActivityCustom
+    {UCLA Supermileage Vehicle (EV)}{E.V. Team Lead ('16-'17), Member ('15-'17)} {2015-2017}
+    
+\resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
