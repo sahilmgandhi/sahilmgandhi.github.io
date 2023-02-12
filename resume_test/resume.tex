@@ -130,23 +130,36 @@
 \resumeSubHeadingListStart
     \resumeSubheadingTwo
       {University of California, Los Angeles}
-      {M.S. Computer Science}{Apr 2019 - Mar 2020}
-      {B.S. Computer Science and Engineering; (\textit{Summa Cum Laude})}{Sep 2015 - Mar 2019}
+      {M.S. Computer Science -- (\textit{Specialization: Distributed and Big Data Systems})} {Apr 2019 - Mar 2020}
+      {B.S. Computer Science and Electrical Engineering -- (\textit{Summa Cum Laude})}{Sep 2015 - Mar 2019}
     
-    \resumeSubItem{Selected Coursework}{Big Data Systems, Computer Security, Parallel and Distributed Computing, Autonomous Vehicle Communications, Algorithms, Operating Systems, Computer Networking, Databases, Machine Learning, ML in Hardware}
+    % \resumeSubItem{Selected Coursework}{Big Data Systems, Computer Security, Parallel and Distributed Computing, Autonomous Vehicle Communications, Algorithms, Operating Systems, Computer Networking, Databases, Machine Learning, ML in Hardware}
 
 \resumeSubHeadingListEnd
 
 %--------PROGRAMMING SKILLS------------
 \section{Skills}
 \resumeSubHeadingListStart
-	\resumeSubItem{Programming Languages}{Java, Go, Python, C\#, Javascript, Bash, C++, C, Hack, Scala}
-	\resumeSubItem{Technologies}{Ansible, CUDA/OpenCL, OpenTSDB, RocksDB, Protobuf, Docker, Jenkins, Git, Mercurial, UNIX}
+	\resumeSubItem{Programming Languages}{Java, Golang, Python, Bash, JavaScript}
+	\resumeSubItem{Frameworks and Technologies}{Kubernetes, Helm, Docker, Protobuf, Vert.x, React, Vault, Terraform, AWS, GCP, AZURE, SQL, PostgreSQL, OpenTelemetry, OpenCensus, DataDog, RocksDB, Git, Mercurial, UNIX}
 \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Work Experience}
 \resumeSubHeadingListStart
+
+    \resumeSubheading
+    {Confluent}{Senior Software Engineer}{June 2020 - Present}
+    \resumeItemListStart
+    \resumeItemOne{Founding engineer on Control Plane Fleet Management team, where we handle day 1+ operations on all cloud clusters}
+    \resumeItemOne{Designed, developed, and deployed workflow engine that increased the number of clusters we could upgrade in a day by 40000\% -- from 5/day to 2000+/day, reducing the time needed to roll the entire fleet from several months to 2 days}
+    \resumeItemOne{Generalized the above workflow engine to apply to any Confluent cluster type (Kafka, KSQL, etc) and any operation type (Upgrade, Restart, Shrink, etc), allowing all cloud teams to take full advantage of immense parallelism factors and continuous monitoring capabilities}
+    \resumeItemOne{Designed, developed, and deployed deployment engine that eliminated custom uses of Helm for Kubernetes service deployments, and scaled it up by over 30000\% from 30 deployments/day to 10000+ deployments/day}
+    \resumeItemOne{Designed, developed, and deployed service to aggregate information of all clusters into a unified view, and assisted in developing a UI that employees could interact with, eliminating the need for manual DB commands or manually stitching information from multiple sources}
+    \resumeItemOne{Designed, developed, and deployed infrastrcture CLIs to talk to the above services}
+    \resumeItemOne{Mentored 5 new employees and conducted tens of interviews and mentoring sessions}
+    \resumeItemListEnd
+
     \resumeSubheading
     {Microsoft}{Software Engineering Intern}{Jun 2019 - Sep 2019}
     \resumeItemListStart
