@@ -167,14 +167,15 @@
 \resumeSubHeadingListStart
 
     \resumeSubheading
-    {Confluent}{Senior Software Engineer}{June 2020 - Present}{Founding engineer on Control Plane Fleet Management team, where we handle day 1+ operations\\ on all cloud clusters}
+    {Confluent}{Senior Software Engineer}{June 2020 - Present}{Founding engineer on Control Plane Fleet Management team, where we design scalable solutions\\ for day 1+ operations on all cloud clusters}
     \resumeItemListStart
-      \resumeItemOne{Designed, developed, and deployed workflow engine that increased the number of clusters we could upgrade in a day by 40000\% -- from 5/day to 2000+/day, reducing the time needed to roll the entire fleet from several months to 2 days}
-      \resumeItemOne{Generalized the above workflow engine to apply to any Confluent cluster type (Kafka, KSQL, etc) and any operation type (Upgrade, Restart, Shrink, etc), allowing all cloud teams to take full advantage of immense parallelism factors and continuous monitoring capabilities}
-      \resumeItemOne{Designed, developed, and deployed deployment engine that eliminated custom uses of Helm for Kubernetes service deployments, and scaled it up by over 30000\% from 30 deployments/day to 10000+ deployments/day}
-      \resumeItemOne{Designed, developed, and deployed service to aggregate information of all clusters into a unified view, and assisted in developing a UI that employees could interact with, eliminating the need for manual DB commands or manually stitching information from multiple sources}
-      \resumeItemOne{Designed, developed, and deployed infrastrcture CLIs to talk to the above services}
-      \resumeItemOne{Mentored 5 new employees and conducted tens of interviews and mentoring sessions}
+        \resumeItemOne{Founding engineer on the Control Plane Fleet Management team, providing day 1+ operations for cloud clusters with extreme efficiency}
+        \resumeItemOne{Spearheaded the design and development of a new Java-based workflow engine, incorporating the Vert.x framework and Datadog monitor APIs; resulting in a 95\% reduction in incident rate and a reduced roll time for the entire fleet from several months to 2 days.}
+        \resumeItemOne{Generalized the workflow engine via a well-defined GRPC contract for seamless compatibility with any Confluent cluster (Kafka, KSQL, etc) and any operation (Upgrade, Restart, Shrink, etc), empowering all cloud teams to leverage maximum parallelism and continuous monitoring}
+        \resumeItemOne{Streamlined microservice deployment through the design and development of a new cloud-agnostic Golang-basd Kubernetes deployment engine; eliminating all manual Helm or kubectl based deployments, and allowing Confluent to scale from 30 deployments/day to 10000+ deployments/day}
+        \resumeItemOne{Developed a unified view of all cluster information through a Golang and ReactJS-based microservice + UI; eliminating manual database commands and reducing manual information stitching from multiple sources}
+        \resumeItemOne{Lead the design and development of a Golang-based infra CLI to securely communicate with the above services via SSO authentication}
+        \resumeItemOne{Mentored 5 new employees and interviewed numerous candidates to foster a positive and productive work environment}
     \resumeItemListEnd
 
     \resumeSubheading
