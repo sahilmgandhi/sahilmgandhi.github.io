@@ -91,6 +91,22 @@
   \vspace{-7pt}
 }
 
+\newcommand{\resumeSubheadingCompanyOnly}[1]{
+  \vspace{-2pt}\item[$ $]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \\
+    \end{tabular*}
+  \vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingTitleOnly}[2]{
+  \vspace{-2pt}\item[$ $]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small #1} & \textbf{\small #2} \\
+    \end{tabular*}
+  \vspace{-7pt}
+}
+
 \newcommand{\resumeSubheadingTwo}[5]{
   \vspace{-2pt}\item[$ $]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -141,42 +157,49 @@
 \section{Skills}
 \resumeSubHeadingListStart
 	\resumeSubItem{Programming Languages}{Java, Golang, Python, Bash, JavaScript}
-	\resumeSubItem{Frameworks and Technologies}{Kubernetes, Docker, Protobuf, Vert.x, Helm, Vault, Terraform, AWS, GCP, AZURE, SQL, PostgreSQL, OpenTelemetry, OpenCensus, DataDog, React, RocksDB, Git, Mercurial, UNIX}
+	\resumeSubItem{Frameworks and Technologies}{Kubernetes, Docker, Protobuf, Vert.x, Helm, Vault, Terraform, AWS, GCP, AZURE, SQL, PostgreSQL, OpenTelemetry, OpenCensus, DataDog, NewRelic React, RocksDB, Git, Mercurial, UNIX}
 \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Work Experience}
 \resumeSubHeadingListStart
 
-    \resumeSubheading
-    {Confluent}{Senior Software Engineer - Control Plane Fleet Management}{June 2020 - Present}
+    \resumeSubheadingCompanyOnly {Confluent}
+    \resumeSubheadingTitleOnly
+    {Senior Software Engineer II - Compute Platform and Capacity}{June 2023 - Present}
+    \resumeItemListStart
+      \resumeItemOne{Redefining the way Confluent regionalizes its control plane and manages its capacity}
+    \resumeItemListEnd
+    \resumeSubheadingTitleOnly
+    {Senior Software Engineer - Control Plane Fleet Management}{June 2022 - June 2023}
     \resumeItemListStart
         \resumeItemOne{As a founding engineer on the Control Plane Fleet Management team, played a critical role in designing scalable solutions for day 1+ operations on cloud clusters}
         \resumeItemOne{Spearheaded the design of a new Java-based workflow engine, incorporating the Vert.x framework and Datadog monitor APIs; resulting in a 95\% reduction in incident rate and reduced the roll time for the entire fleet from several months to 2 days}
-        \resumeItemOne{Generalized the workflow engine via a well-defined GRPC contract for seamless compatibility with any Confluent cluster (Kafka, KSQL, etc) and any operation (Upgrade, Restart, Shrink, etc), empowering all cloud teams to leverage maximum parallelism and continuous monitoring}
-        \resumeItemOne{Streamlined microservice deployment through the design and development of a new cloud-agnostic Golang-based Kubernetes deployment engine; eliminating all manual Helm or Kubectl based deployments, and allowing Confluent to scale from 30 to 10000+ deployments/day}
+        \resumeItemOne{Generalized the workflow engine via a well-defined GRPC contract for seamless compatibility with any Confluent cluster and any operations, empowering all cloud teams to leverage maximum parallelism and continuous monitoring}
+        \resumeItemOne{Streamlined microservice deployment through the design and development of a new cloud-agnostic Golang-based Kubernetes deployment engine; eliminating manual Helm deployments, and scaling from 30 to 10000+ deployments/day}
         \resumeItemOne{Developed a unified view of all cluster information through a Golang and ReactJS-based microservice + UI; eliminating manual database commands and reducing manual information stitching from multiple sources}
-        \resumeItemOne{Lead the design and development of a Golang-based infra CLI to securely communicate with the above services via SSO authentication}
+        \resumeItemOne{Lead the design and development of a Golang-based infra CLI to securely interact with the above services via SSO auth}
         \resumeItemOne{Mentored 5 new employees and interviewed numerous candidates to foster a positive and inclusive work environment}
     \resumeItemListEnd
+    \resumeSubheadingTitleOnly
+    {Software Engineer II - Control Plane Fleet Management}{June 2021 - June 2022}
+    \resumeSubheadingTitleOnly
+    {Software Engineer - Control Plane Fleet Management}{June 2020 - June 2021}
 
-    \resumeSubheading
-    {Microsoft}{Software Engineering Intern - Microsoft Research (BuildXL)}{Jun 2019 - Sep 2019}
+    \resumeSubheading{Microsoft}{Software Engineering Intern - Microsoft Research (BuildXL)}{Jun 2019 - Sep 2019}
     \resumeItemListStart
         \resumeItemOne{Revamped logging infrastructure in distributed build tool to use ProtoBuf schemas for forward/backward compatibility}
         \resumeItemOne{Implemented a caching feature for important log data in RocksDB to speed up log file analyzers between 5x and 200x, allowing software engineers in Windows and Office to gain insights to optimize their distributed builds further}
     \resumeItemListEnd
     
-    \resumeSubheading
-    {UCLA ScAi Lab}{Undergraduate/Graduate Researcher}{Jan 2018 - Jun 2019}
+    \resumeSubheading{UCLA ScAi Lab}{Undergraduate/Graduate Researcher}{Jan 2018 - Jun 2019}
     \resumeItemListStart
         \resumeItemOne{Researched under Dr. Zaniolo and Ariyam Das on real-time streaming DBs, NLP Datalog parsers, and
         graph visualizations}
         \resumeItemOne{Built an n-ary And-Or tree parser for faster querying, an NLP tool to parse Datalog and Python profilers for HAT trees}
     \resumeItemListEnd
 
-    \resumeSubheading
-    {Facebook}{Software Engineering Intern - Release To Production Team}{Jun 2018 - Sep 2018}
+    \resumeSubheading{Facebook}{Software Engineering Intern - Release To Production Team}{Jun 2018 - Sep 2018}
     \resumeItemListStart
         \resumeItemOne{Merged functionalities of several testing tools to enable automated re-testing and move to the new CI/CT pipeline}
         \resumeItemOne{Optimized the DB design to speed up queries and the validation portal UI by more than 50\%, and automated the creation and updates of test results: saving the organization over \$300,000 a year in man-hours}
