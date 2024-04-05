@@ -157,7 +157,7 @@
 \section{Skills}
 \resumeSubHeadingListStart
 	\resumeSubItem{Programming Languages}{Java, Golang, Python, Bash, JavaScript}
-	\resumeSubItem{Frameworks and Technologies}{Kubernetes, Docker, Protobuf, Vert.x, Helm, Vault, Terraform, AWS, GCP, AZURE, SQL, PostgreSQL, OpenTelemetry, OpenCensus, DataDog, NewRelic React, RocksDB, Git, Mercurial, UNIX}
+	\resumeSubItem{Frameworks and Technologies}{Kubernetes, Docker, Protobuf, Vert.x, Helm, Vault, Terraform, AWS, GCP, AZURE, SQL, PostgreSQL, OpenTelemetry, OpenCensus, DataDog, NewRelic, UNIX, React, RocksDB, Git, Mercurial}
 \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
@@ -168,7 +168,11 @@
     \resumeSubheadingTitleOnly
     {Senior Software Engineer II - Compute Platform and Capacity}{June 2023 - Present}
     \resumeItemListStart
-      \resumeItemOne{Redefining the way Confluent regionalizes its control plane and manages its capacity}
+      % \resumeItemOne{Redefining the way Confluent regionalizes its control plane and manages its capacity}
+      \resumeItemOne{Promoted Vertical Pod Autoscaler (VPA) adoption, slashing Kubernetes cluster spend by \$10k+/mo}
+      \resumeItemOne{Developed scaffolding Terraform components for seamless migration of monitors and dashboards from Datadog to NewRelic}
+      \resumeItemOne{Automated node type migrations for Kafka, yielding savings of \$2m+/yr and improving end-to-end latency by 20\%} 
+      \resumeItemOne{Designed interface to transfer Flink compute pools between Kubernetes, boosting utilization through pool colocation and enhancing disaster recovery for Kubernetes failures}
     \resumeItemListEnd
     \resumeSubheadingTitleOnly
     {Senior Software Engineer - Control Plane Fleet Management}{June 2022 - June 2023}
@@ -177,12 +181,12 @@
     \resumeSubheadingTitleOnly
     {Software Engineer - Control Plane Fleet Management}{June 2020 - June 2021}
     \resumeItemListStart
-      \resumeItemOne{As a founding engineer on the Control Plane Fleet Management team, played a critical role in designing scalable solutions for day 1+ operations on cloud clusters}
+      \resumeItemOne{Founding engineer on the Fleet Management team that designs scalable solutions for day 1+ operations on clusters}
       \resumeItemOne{Spearheaded the design of a new Java-based workflow engine, incorporating the Vert.x framework and Datadog monitor APIs; resulting in a 95\% reduction in incident rate and reduced the roll time for the entire fleet from several months to 2 days}
       \resumeItemOne{Generalized the workflow engine via a well-defined GRPC contract for seamless compatibility with any Confluent cluster and any operations, empowering all cloud teams to leverage maximum parallelism and continuous monitoring}
       \resumeItemOne{Streamlined microservice deployment through the design and development of a new cloud-agnostic Golang-based Kubernetes deployment engine; eliminating manual Helm deployments, and scaling from 30 to 10000+ deployments/day}
       \resumeItemOne{Developed a unified view of all cluster information through a Golang and ReactJS-based microservice + UI; eliminating manual database commands and reducing manual information stitching from multiple sources}
-      \resumeItemOne{Lead the design and development of a Golang-based infra CLI to securely interact with the above services via SSO auth}
+      % \resumeItemOne{Lead the design and development of a Golang-based infra CLI to securely interact with the above services via SSO auth}
       \resumeItemOne{Mentored 5 new employees and interviewed numerous candidates to foster a positive and inclusive work environment}
   \resumeItemListEnd
 
@@ -202,7 +206,7 @@
     \resumeSubheading{Facebook}{Software Engineering Intern - Release To Production Team}{Jun 2018 - Sep 2018}
     \resumeItemListStart
         \resumeItemOne{Merged functionalities of several testing tools to enable automated re-testing and move to the new CI/CT pipeline}
-        \resumeItemOne{Optimized the DB design to speed up queries and the validation portal UI by more than 50\%, and automated the creation and updates of test results: saving the organization over \$300,000 a year in man-hours}
+        \resumeItemOne{Optimized the DB design to speed up queries and the validation portal UI by more than 50\%, and automated the creation and updates of test results: saving the organization \$300k/yr a year in man-hours}
     \resumeItemListEnd
   
     % \resumeSubheading
