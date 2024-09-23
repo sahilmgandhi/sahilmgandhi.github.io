@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.12)  10 AUG 2023 22:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.12)  22 SEP 2024 23:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/sahilmgandhi/Desktop/Github/sahilmgandhi.github.io/resume_test/cv.tex
-(/Users/sahilmgandhi/Desktop/Github/sahilmgandhi.github.io/resume_test/cv.tex
+**/Users/sahilmgandhi/Desktop/Github/sahilmgandhi.github.io/resume_test/resume.tex
+(/Users/sahilmgandhi/Desktop/Github/sahilmgandhi.github.io/resume_test/resume.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021basic/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -213,27 +213,27 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [10.8pt].
 
-(./cv.aux)
-\openout1 = `cv.aux'.
+(./resume.aux)
+\openout1 = `resume.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 143.
-LaTeX Font Info:    ... okay on input line 143.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
  (/usr/local/texlive/2021basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count266
@@ -248,7 +248,7 @@ LaTeX Font Info:    ... okay on input line 143.
 \makeMPintoPDFobject=\count271
 \everyMPtoPDFconversion=\toks22
 )
-Package hyperref Info: Link coloring ON on input line 143.
+Package hyperref Info: Link coloring ON on input line 133.
  (/usr/local/texlive/2021basic/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2021basic/texmf-dist/tex/latex/refcount/refcount.sty
@@ -258,25 +258,25 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count272
 )
-LaTeX Info: Redefining \ref on input line 143.
-LaTeX Info: Redefining \pageref on input line 143.
-LaTeX Info: Redefining \nameref on input line 143.
- (./cv.out) (./cv.out)
+LaTeX Info: Redefining \ref on input line 133.
+LaTeX Info: Redefining \pageref on input line 133.
+LaTeX Info: Redefining \nameref on input line 133.
+ (./resume.out) (./resume.out)
 \@outlinefile=\write3
-\openout3 = `cv.out'.
+\openout3 = `resume.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 146.
+(Font)              <7> on input line 136.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 146.
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 146.
+(Font)              <5> on input line 136.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 136.
  (/usr/local/texlive/2021basic/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 168.
+(Font)              <9> on input line 160.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 168.
+(Font)              <6> on input line 160.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -285,29 +285,23 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 [1
 
-{/usr/local/texlive/2021basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package fancyhdr Warning: \footskip is too small (0.0pt): 
-(fancyhdr)                Make it at least 3.60004pt, for example:
-(fancyhdr)                \setlength{\footskip}{3.60004pt}.
-
-[2] (./cv.aux)
-Package rerunfilecheck Info: File `cv.out' has not changed.
-(rerunfilecheck)             Checksum: D6B37628653AA35E22A1269E5A7A4933;844.
+{/usr/local/texlive/2021basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./resume.aux)
+Package rerunfilecheck Info: File `resume.out' has not changed.
+(rerunfilecheck)             Checksum: 7682CD4D892849F967C6876523080CF8;620.
  ) 
 Here is how much of TeX's memory you used:
- 9206 strings out of 480445
- 134693 string characters out of 5892391
- 466969 words of memory out of 5000000
- 26366 multiletter control sequences out of 15000+600000
+ 9200 strings out of 480445
+ 134686 string characters out of 5892391
+ 463895 words of memory out of 5000000
+ 26363 multiletter control sequences out of 15000+600000
  408671 words of font info for 47 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 71i,11n,74p,463b,573s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,11n,74p,364b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/sahilmgandhi/Library/texlive/2021basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on cv.pdf (2 pages, 145560 bytes).
+Output written on resume.pdf (1 page, 132093 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 85 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

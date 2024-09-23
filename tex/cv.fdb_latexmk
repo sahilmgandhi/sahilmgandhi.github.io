@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1691731352 "/Users/sahilmgandhi/Desktop/Github/sahilmgandhi.github.io/resume_test/cv.tex" "cv.pdf" "cv" 1691731427
-  "/Users/sahilmgandhi/Desktop/Github/sahilmgandhi.github.io/resume_test/cv.tex" 1691731427 16857 dc9e3fe795005e05aaa307122417e043 ""
+["pdflatex"] 1727071853 "/Users/sahilmgandhi/Desktop/Github/sahilmgandhi.github.io/resume_test/cv.tex" "cv.pdf" "cv" 1727072007
+  "/Users/sahilmgandhi/Desktop/Github/sahilmgandhi.github.io/resume_test/cv.tex" 1727072007 17580 578c13e0184fecb6a96d828bd6b2d33f ""
   "/Users/sahilmgandhi/Library/texlive/2021basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk" 1626157029 10448 6651e4a5ed70daea01fb6fadac3a4f68 ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/tfm/jknappen/ec/tcrm0900.tfm" 1136768653 1536 c4f439db76ef96a9c53bc437f35ffe20 ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -82,11 +82,11 @@
   "/usr/local/texlive/2021basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1626156939 79230 47cc50e3da70ed86bec1980120085f11 ""
   "/usr/local/texlive/2021basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1626154908 2057445 122157d0daa39c3a5d344a5d54f1be1e ""
   "/usr/local/texlive/2021basic/texmf.cnf" 1616691442 628 e23d78b1be89c53495d66eec94d2300d ""
-  "cv.aux" 1691731353 1559 1b0a2bb2bc9d68e6a78f848ea926db2a "pdflatex"
-  "cv.out" 1691731353 844 d6b37628653aa35e22a1269e5a7a4933 "pdflatex"
-  "cv.tex" 1691731427 16857 dc9e3fe795005e05aaa307122417e043 ""
+  "cv.aux" 1727071853 1559 43a693310c19bafcb29b0a040e6bd669 "pdflatex"
+  "cv.out" 1727071853 844 d6b37628653aa35e22a1269e5a7a4933 "pdflatex"
+  "cv.tex" 1727072007 17580 578c13e0184fecb6a96d828bd6b2d33f ""
   (generated)
+  "cv.aux"
+  "cv.pdf"
   "cv.out"
   "cv.log"
-  "cv.pdf"
-  "cv.aux"
