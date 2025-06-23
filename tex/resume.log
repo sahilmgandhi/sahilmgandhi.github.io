@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.12)  22 JUN 2025 17:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.12)  22 JUN 2025 17:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -287,7 +287,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 {/usr/local/texlive/2021basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./resume.aux)
 Package rerunfilecheck Info: File `resume.out' has not changed.
-(rerunfilecheck)             Checksum: A249FE58E279C4B86B05BF1D208E4CCE;623.
+(rerunfilecheck)             Checksum: 070624F6CA8D9C14114C0E9263FBC4FE;534.
  ) 
 Here is how much of TeX's memory you used:
  9198 strings out of 480445
@@ -298,7 +298,7 @@ Here is how much of TeX's memory you used:
  319 hyphenation exceptions out of 8191
  71i,11n,74p,356b,375s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/sahilmgandhi/Library/texlive/2021basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on resume.pdf (1 page, 126769 bytes).
+Output written on resume.pdf (1 page, 126609 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  67 compressed objects within 1 object stream
