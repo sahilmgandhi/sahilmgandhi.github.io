@@ -1329,7 +1329,7 @@ input, select, textarea {
 		font-weight: 300;
 		color: #777777;
 		font-size: 20pt;
-		line-height: 1.75em;
+		line-height: 1.5em;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -1434,7 +1434,7 @@ input, select, textarea {
 	}
 
 	p, ul, ol, dl, table, blockquote, form {
-		margin-bottom: 2em;
+		margin-bottom: 0.9em;
 	}
 
 /* Table */
@@ -1520,7 +1520,7 @@ input, select, textarea {
 /* Section/Article */
 
 	section, article {
-		margin-bottom: 3em;
+		margin-bottom: 1.25em;
 	}
 
 		section > :last-child, section:last-child, article > :last-child, article:last-child {
@@ -1528,11 +1528,11 @@ input, select, textarea {
 		}
 
 	header {
-		margin: 0 0 1.5em 0;
+		margin: 0 0 0.8em 0;
 	}
 
 		header > p {
-			margin: 0.5em 0 0 0;
+			margin: 0.25em 0 0 0;
 			color: #aaa;
 		}
 
@@ -1873,6 +1873,7 @@ input, select, textarea {
 
 /* Wrapper */
 
+	/* Center horizontally but allow vertical flow for native scrolling */
 	#wrapper {
 		width: 45em;
 		margin: 0 auto;
@@ -1891,10 +1892,11 @@ input, select, textarea {
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		-moz-justify-content: center;
-		-webkit-justify-content: center;
-		-ms-justify-content: center;
-		justify-content: center;
+		/* Allow content to flow from top down instead of vertically centering */
+		-moz-justify-content: flex-start;
+		-webkit-justify-content: flex-start;
+		-ms-justify-content: flex-start;
+		justify-content: flex-start;
 		-moz-transition: opacity 1s ease-in-out;
 		-webkit-transition: opacity 1s ease-in-out;
 		-ms-transition: opacity 1s ease-in-out;
@@ -1945,7 +1947,8 @@ input, select, textarea {
 
 	#main {
 		position: relative;
-		overflow: hidden;
+		/* Allow normal vertical scrolling of panels */
+		overflow: visible;
 		width: 100%;
 		background: #ffffff;
 		box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
@@ -1955,14 +1958,28 @@ input, select, textarea {
 		transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
 	}
 
+	/* Smooth scroll and anchor offset so headings aren't hidden under the nav */
+	html {
+		scroll-behavior: smooth;
+	}
+
+	/* Create offset for anchors (nav height ~4.25em) */
+	.panel:target:before {
+		content: '';
+		display: block;
+		height: 4.5em;
+		margin-top: -4.5em;
+	}
+
 		#main > .panel {
 			-moz-transition: opacity 0.25s ease-in-out;
 			-webkit-transition: opacity 0.25s ease-in-out;
 			-ms-transition: opacity 0.25s ease-in-out;
 			transition: opacity 0.25s ease-in-out;
-			margin-bottom: 0;
+			/* allow spacing between stacked panels for scrolling */
+			margin-bottom: 1.25em;
 			position: relative;
-			padding: 3.5em 2.5em 2.5em 2.5em;
+			padding: 2em 1.5em 1.25em 1.5em;
 			width: 100%;
 		}
 
@@ -2007,7 +2024,8 @@ input, select, textarea {
 					-ms-flex-shrink: 0;
 					flex-shrink: 0;
 					width: 17em;
-					height: 100%;
+					/* constrain height to avoid vertical stretching */
+					height: 20em;
 				}
 
 					#main > .panel.intro .pic:before {
@@ -2022,11 +2040,7 @@ input, select, textarea {
 					}
 
 					#main > .panel.intro .pic img {
-						position: relative;
 						display: block;
-						position: absolute;
-						top: 0;
-						left: 0;
 						width: 100%;
 						height: 100%;
 						-moz-object-fit: cover;
