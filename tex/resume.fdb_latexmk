@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1764324535 "/Users/sahilmgandhi/Desktop/Github/sahilmgandhi.github.io/tex/resume.tex" "resume.pdf" "resume" 1764324535
-  "/Users/sahilmgandhi/Desktop/Github/sahilmgandhi.github.io/tex/resume.tex" 1764324534 10892 e3031f4d18dfccf22b6b7cb78967f77b ""
+["pdflatex"] 1766700300 "/Users/sahilmgandhi/Desktop/Github/sahilmgandhi.github.io/tex/resume.tex" "resume.pdf" "resume" 1766700301
+  "/Users/sahilmgandhi/Desktop/Github/sahilmgandhi.github.io/tex/resume.tex" 1766700299 10977 23405c6ad479ee70f9a8c3594a399b43 ""
   "/Users/sahilmgandhi/Library/texlive/2021basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk" 1626157029 10448 6651e4a5ed70daea01fb6fadac3a4f68 ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/tfm/jknappen/ec/tcrm0900.tfm" 1136768653 1536 c4f439db76ef96a9c53bc437f35ffe20 ""
   "/usr/local/texlive/2021basic/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -82,11 +82,11 @@
   "/usr/local/texlive/2021basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1626156939 79230 47cc50e3da70ed86bec1980120085f11 ""
   "/usr/local/texlive/2021basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1626154908 2057445 122157d0daa39c3a5d344a5d54f1be1e ""
   "/usr/local/texlive/2021basic/texmf.cnf" 1616691442 628 e23d78b1be89c53495d66eec94d2300d ""
-  "resume.aux" 1764324535 1233 c94e1f58efda31f5eedb5527f0d97f1d "pdflatex"
-  "resume.out" 1764324535 534 070624f6ca8d9c14114c0e9263fbc4fe "pdflatex"
-  "resume.tex" 1764324534 10892 e3031f4d18dfccf22b6b7cb78967f77b ""
+  "resume.aux" 1766700301 1233 c94e1f58efda31f5eedb5527f0d97f1d "pdflatex"
+  "resume.out" 1766700301 534 070624f6ca8d9c14114c0e9263fbc4fe "pdflatex"
+  "resume.tex" 1766700299 10977 23405c6ad479ee70f9a8c3594a399b43 ""
   (generated)
+  "resume.log"
   "resume.aux"
   "resume.pdf"
-  "resume.log"
   "resume.out"
