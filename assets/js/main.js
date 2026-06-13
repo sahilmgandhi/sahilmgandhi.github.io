@@ -1,51 +1,95 @@
-/*
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+document.addEventListener('DOMContentLoaded', () => {
+    // ==========================================================================
+    // Mobile Navigation Menu Toggle
+    // ==========================================================================
+    const menuToggleBtn = document.getElementById('menu-toggle-btn');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-(function($) {
+    const toggleMenu = () => {
+        navMenu.classList.toggle('open');
+        menuToggleBtn.classList.toggle('active');
+    };
 
-	var $window = $(window),
-		$body = $('body');
+    const closeMenu = () => {
+        navMenu.classList.remove('open');
+        menuToggleBtn.classList.remove('active');
+    };
 
-	// Breakpoints (kept for responsive helpers used elsewhere)
-	breakpoints({
-		xlarge:  [ '1281px',  '1680px' ],
-		large:   [ '981px',   '1280px' ],
-		medium:  [ '737px',   '980px'  ],
-		small:   [ '361px',   '736px'  ],
-		xsmall:  [ null,      '360px'  ]
-	});
+    menuToggleBtn.addEventListener('click', toggleMenu);
 
-	// Play initial animations on page load.
-	$window.on('load', function() {
-		window.setTimeout(function() {
-			$body.removeClass('is-preload');
-		}, 100);
-	});
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
 
-	// No panel hiding/showing. Use native browser scrolling and anchor links.
+    // Close menu when clicking outside of it
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+            closeMenu();
+        }
+    });
 
-	// IE: minimal fixes (harmless to keep)
-	if (typeof browser !== 'undefined' && browser.name == 'ie') {
+    // ==========================================================================
+    // Copy-to-Clipboard Deobfuscated Email Action
+    // ==========================================================================
+    const copyEmailBtn = document.getElementById('copy-email-btn');
+    const tooltip = document.getElementById('copy-tooltip');
+    let copyTimeout;
 
-		// Fix intro pic.
-		$('.panel.intro').each(function() {
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', () => {
+            // Reconstruct email dynamically to prevent bot scraping from HTML source
+            const localPart = 'sahilmgandhi';
+            const domainPart = 'gmail.com';
+            const email = `${localPart}@${domainPart}`;
+            
+            navigator.clipboard.writeText(email).then(() => {
+                // Visual feedback
+                copyEmailBtn.classList.add('copied');
+                tooltip.textContent = 'Copied!';
+                
+                // Clear any existing timeout
+                if (copyTimeout) clearTimeout(copyTimeout);
+                
+                // Reset tooltip after 2 seconds
+                copyTimeout = setTimeout(() => {
+                    copyEmailBtn.classList.remove('copied');
+                    tooltip.textContent = 'Copy Email';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy email: ', err);
+                tooltip.textContent = 'Failed to copy';
+            });
+        });
+    }
 
-			var $pic = $(this).children('.pic'),
-				$img = $pic.children('img');
+    // ==========================================================================
+    // ScrollSpy: Active Section Navigation Highlighting
+    // ==========================================================================
+    const sections = document.querySelectorAll('section[id]');
+    const header = document.getElementById('header');
+    
+    const scrollActive = () => {
+        const scrollY = window.pageYOffset;
+        const headerHeight = header ? header.offsetHeight : 64;
 
-			$pic
-				.css('background-image', 'url(' + $img.attr('src') + ')')
-				.css('background-size', 'cover')
-				.css('background-position', 'center');
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - headerHeight - 20; // Cushioned offset
+            const sectionId = current.getAttribute('id');
+            const navLink = document.querySelector(`.nav-link[href*="${sectionId}"]`);
 
-			$img
-				.css('visibility', 'hidden');
+            if (navLink) {
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    navLink.classList.add('active');
+                } else {
+                    navLink.classList.remove('active');
+                }
+            }
+        });
+    };
 
-		});
-
-	}
-
-})(jQuery);
+    window.addEventListener('scroll', scrollActive);
+    // Trigger scroll spy on load
+    scrollActive();
+});

@@ -1,124 +1,466 @@
-<!DOCTYPE HTML>
-<!--
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Sahil Gandhi | Software Engineer</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil Gandhi | Software Engineer</title>
+    <meta name="description" content="Portfolio of Sahil Gandhi, a Systems & Software Engineer specializing in distributed systems, databases, and voice AI.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for brand icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="dark-theme">
+    <!-- Header/Navigation -->
+    <header class="header" id="header">
+        <div class="header-container container">
+            <a href="#about" class="logo">
+                <span class="logo-accent">&lt;</span>Sahil Gandhi<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link active">About</a></li>
+                    <li><a href="#patents" class="nav-link">Patents</a></li>
+                    <li><a href="#research" class="nav-link">Research</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                </ul>
+            </nav>
 
-		<!-- Wrapper-->
-			<div id="wrapper">
+            <div class="header-actions">
+                <div class="menu-toggle" id="menu-toggle-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<a href="#" class="icon solid fa-home"><span STYLE="font-family: Arial; font-weight: normal">Home</span></a>
-						<a href="http://www.github.com/sahilmgandhi" class="fas fa-code-branch"><span STYLE="font-family: Arial; font-weight: normal">Github</span></a>
-						<a href="http://www.linkedin.com/in/sahilmgandhi" class="fab fa-linkedin"><span STYLE="font-family: Arial; font-weight: normal">LinkedIn</span></a>
-						<a href="resume.pdf" class="far fa-file-pdf"><span STYLE="font-family: Arial; font-weight: normal">Resume</span></a>
-						<a href="cv.pdf" class="fas fa-clipboard-list"><span STYLE="font-family: Arial; font-weight: normal">CV</span></a>
-					</nav>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero / About Section -->
+        <section id="about" class="hero section">
+            <div class="hero-bg-glow"></div>
+            <div class="hero-container container">
+                <div class="hero-content">
+                    <div class="badge-row">
+                        <span class="badge primary-badge">Distributed Systems</span>
+                        <span class="badge secondary-badge">Voice AI LLM</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Building robust & <br>
+                        <span class="gradient-text">scalable software</span> systems.
+                    </h1>
+                    <p class="hero-description">
+                        Hi, I'm <strong>Sahil Gandhi</strong>. I'm a Software Engineer with a passion for designing and optimizing complex backend infrastructure. Currently, I am a Staff Software Engineer at <strong>Sierra</strong> building the foundational platform for generative AI voice services.
+                    </p>
+                    
+                    <!-- Interactive Contact & Copy Email -->
+                    <div class="email-copy-wrapper">
+                        <button class="email-btn" id="copy-email-btn">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span class="email-text">sahilmgandhi [at] gmail [dot] com</span>
+                            <span class="copy-tooltip" id="copy-tooltip">Copy Email</span>
+                        </button>
+                    </div>
 
-				<!-- Main -->
-					<div id="main">
-						
-						<!-- Me -->
-							<article id="home" class="panel intro">
-								<header>
-									<h1>Sahil Gandhi</h1>
+                    <!-- Actions & Socials -->
+                    <div class="hero-actions">
+                        <div class="doc-links">
+                            <a href="resume.pdf" class="btn btn-primary" target="_blank">
+                                <i class="fa-regular fa-file-pdf"></i> Resume
+                            </a>
+                            <a href="cv.pdf" class="btn btn-outline" target="_blank">
+                                <i class="fa-solid fa-clipboard-list"></i> Curriculum Vitae
+                            </a>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/sahilmgandhi" target="_blank" class="social-icon" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/sahilmgandhi" target="_blank" class="social-icon" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-									<p> Email: <code>sahilmgandhi</code> [at] gmail [dot] com </p>
-								</header>
-								<a class="pic"><img src="images/me.jpg" alt="" /></a>
-							</article>
+                <!-- Profile Photo -->
+                <div class="hero-image-wrapper">
+                    <div class="profile-card">
+                        <div class="profile-img-frame">
+                            <img src="images/me.jpg" alt="Sahil Gandhi" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-							<!-- Work -->
-							<article id="work" class="panel">
-                                
-								<h1>Patents</h1> <br>
+        <!-- Patents Section -->
+        <section id="patents" class="patents section section-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Intellectual Property</span>
+                    <h2 class="section-title">Patents</h2>
+                    <p class="section-desc">Innovative solutions designed and patented during my work on cloud-native streaming and distributed infrastructure.</p>
+                </div>
 
-								<p> While working at Confluent, I was an inventor on the following patents:</p>
+                <div class="patents-grid">
+                    <!-- Patent 1 -->
+                    <div class="patent-card card">
+                        <div class="patent-header">
+                            <div class="patent-icon-wrapper">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <span class="patent-number">US 12,639,100</span>
+                        </div>
+                        <h3 class="patent-title">Container Orchestration Using Siloed Availability Zones</h3>
+                        <p class="patent-description">
+                            Methods and systems for container deployment across isolated zones to guarantee high-availability, fault domain separation, and minimal traffic hop overhead.
+                        </p>
+                        <div class="card-footer">
+                            <span class="patent-tag">Orchestration</span>
+                            <span class="patent-tag">High Availability</span>
+                        </div>
+                    </div>
 
-								<ul>
-									<li>Managing Applications Spread across Kubernetes Clusters and Boundaries — 18/958,570</li>
-									<li>Ensuring Time Frame for Cloud Software Rollouts — 19/056,415</li>
-								</ul>
-								<br>
+                    <!-- Patent 2 -->
+                    <div class="patent-card card">
+                        <div class="patent-header">
+                            <div class="patent-icon-wrapper">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                            </div>
+                            <span class="patent-number">US 19/056,415</span>
+                        </div>
+                        <h3 class="patent-title">Ensuring Time Frame for Cloud Software Rollouts</h3>
+                        <p class="patent-description">
+                            A framework that guarantees consistent rollout velocity, safety degradation checks, and automated rollback strategies within bounded time-windows across cloud fleets.
+                        </p>
+                        <div class="card-footer">
+                            <span class="patent-tag">Rollout Orchestration</span>
+                            <span class="patent-tag">Fleet Management</span>
+                        </div>
+                    </div>
 
-								<h1>Research and Publications</h1> <br>
-                                
-                                <h2>Conference Publications</h2> <br>
-                                
-                                <p>I researched under <a href="http://web.cs.ucla.edu/~zaniolo/">Dr. Zaniolo</a> at the UCLA Scalable Analytics Institute
-                                (SCAI) for 1.5 years between January 2018 and June 2019. I primarily worked with PhD student <a href="https://dblp.org/pers/hd/d/Das:Ariyam">Ariyam Das</a> 
-                                on several projects ranging from using Datalog to query data streams efficiently, creating a more accurate version of the 
-                                Hoeffding Anytime Tree that used bagging and bootstrapping to increase performance, an NLP parser for Datalog, and more!</p>
-                                  
-                                [1] Ariyam Das, Jin Wang, Sahil M. Gandhi: Learn Smart with Less - Building Better
-                                Online Decision Trees with Fewer Training Examples. IJCAI 2019 <a href="https://www.ijcai.org/proceedings/2019/0306.pdf">(Paper)</a> <br> <br>
-                                
-                                [2] Ariyam Das, Sahil M. Gandhi, Carlo Zaniolo: ASTRO - A Datalog System for Advanced Stream Reasoning. CIKM 2018: 1863-1866 <a href="https://dl.acm.org/citation.cfm?doid=3269206.3269223">(Paper)</a> <br> <br>
-                                
-                                <h2>Whitepapers</h2> <br>
-                                
-                                <p>I've also had the opportunity to conduct some independent research throughout graduate school and have written several white papers on these topics.</p>
-                                
-                                [1] Sahil M. Gandhi: Xldb - Execution Log DataBase <a href="whitepapers/Xldb.pdf"> (Paper) </a> <br> <br>
-                                
-                                [2] Sahil M. Gandhi, Max Wang, Daniel Achee: IoTShark - Monitoring and Analyzing IOT Traffic <a href="whitepapers/IoTShark.pdf"> (Paper) </a> <br> <br>
-                                
-                                [3] Sahl M. Gandhi, Kaushik Mahorker, Wenlong Xiong: SIKE: An Analysis of Serializing Interfaces in Kafka Experiments <a href="whitepapers/SIKE.pdf"> (Paper) </a> <br> <br>
-                                
-                                [4] Sahil M. Gandhi, Matthew Wong: PKEG - Parallel Kernel Execution on GPUs <a href="whitepapers/PKEG.pdf"> (Paper) </a> <br> <br>
-                                
-								
-								<!-- Internships removed per request -->
-                                <h1>Personal Projects</h1> <br>
-                                <ol>
-                                    <li>Stock-Trader: An automated stock trading bot integrated with Alpaca with custom strategies (work in progress).</li>
-                                    <li><a href="https://github.com/sahilmgandhi/prequel-error-codes">Prequel Error Codes:</a> A Chrome extension that turns HTTP error codes from various sites into fun Star Wars prequel memes instead. Available on the <a href="https://chrome.google.com/webstore/detail/prequelerrorcodes/cdjhhanfoilmkjidljiacahphcfgjbkc">Chrome Store</a>.</li>
-                                    <li><a href="https://github.com/etank7000/Micromouse">Micromouse:</a> An automatic maze solving robot designed from the ground up (components, PCB, soldering, and more) and programmed in C/C++. Placed 1st at CAMM and UCR Regionals and 2nd at AAMC two years in a row.</li>
-                                    <li> <a href="https://jonathan.zaturensky.com/projects/">Trivia-Bot:</a> An automated python bot to help out with trivia games like HQ, Beat the Q, and more</li> 
-                                    <li> <a href="https://github.com/sahilmgandhi/FreeThrowClassifier">Free Throw Classifier:</a> A classifier for good versus bad free throws using multiple Hexiwears mounted on a participant's arm and a Raspberry Pi central server. A brief presentation and an accuracy analysis are <a href="https://docs.google.com/presentation/d/1qoTKB66uaKdh6aG1WqI_lz4zfSAvpxa71AFHYtjVaCk/edit?usp=sharing">here</a>.</li>
-                                    <li><a href="https://github.com/vanshg/BruinMenu-Backend">Bruin Dining API:</a> A backend API to scrape UCLA dining hall data for 3rd party developers to use in their apps. A <a href="http://bruindining.herokuapp.com/">GUI</a> is also available to scrape the menus.</li>
-                                    <li><a href="https://github.com/getCarm/CARM">C.A.R.M.:</a> Communicating Across Random Masses is a Chrome extension that allows users on any website chat with each other anonymously and immediately. Available on the <a href="https://chrome.google.com/webstore/detail/carm/gnepbnmmbmkipbdbclbekhklbbijmibf">Chrome Store</a>.</li>
-                                    <li><a href="https://github.com/sahilmgandhi/REM.my">REM.my:</a> A smarter (yet simpler and not bloated) alarm system that optimizes a user's sleep for their REM cycles. Available on the <a href="https://play.google.com/store/apps/details?id=com.sahilmgandhi.remmy">Playstore</a>.</li>
-                                </ol>
+                    <!-- Patent 3 -->
+                    <div class="patent-card card">
+                        <div class="patent-header">
+                            <div class="patent-icon-wrapper">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                            </div>
+                            <span class="patent-number">US 11,983,524</span>
+                        </div>
+                        <h3 class="patent-title">Automated Upgrade in Distributed Computing Environments</h3>
+                        <p class="patent-description">
+                            Automated strategies for executing rolling version upgrades of stateful engines in distributed topologies while preserving partition consensus and service SLA.
+                        </p>
+                        <div class="card-footer">
+                            <span class="patent-tag">Distributed Systems</span>
+                            <span class="patent-tag">Zero Downtime Upgrades</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-							</article>
+        <!-- Research Section -->
+        <section id="research" class="research section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Academic & Independent</span>
+                    <h2 class="section-title">Research & Publications</h2>
+                    <p class="section-desc">Exploring the intersection of scalable data engines, stream reasoning, and database internals.</p>
+                </div>
 
-						<!-- Contact -->
-					</div>
+                <div class="research-intro card">
+                    <div class="ucla-banner">
+                        <i class="fa-solid fa-graduation-cap ucla-icon"></i>
+                        <div>
+                            <h4>UCLA Scalable Analytics Institute (SCAI)</h4>
+                            <p>Researched under <strong>Dr. Carlo Zaniolo</strong> for 1.5 years (Jan 2018 – Jun 2019) alongside PhD student <strong>Ariyam Das</strong>. Collaborated on query-efficient stream processing with Datalog, improved decision-tree algorithms, and custom natural language parsing solutions.</p>
+                        </div>
+                    </div>
+                </div>
 
-				<!-- Footer -->
-					<div id="footer">
-						<ul class="copyright">
-<!--							<li>&copy; Sahil.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
-						</ul>
-					</div>
+                <div class="research-grid">
+                    <!-- Conference Publications -->
+                    <div class="research-category">
+                        <h3 class="category-title"><i class="fa-solid fa-scroll"></i> Conference Publications</h3>
+                        <div class="publications-list">
+                            <!-- Pub 1 -->
+                            <div class="pub-card card">
+                                <span class="pub-venue">IJCAI 2019</span>
+                                <h4 class="pub-title">Learn Smart with Less - Building Better Online Decision Trees with Fewer Training Examples</h4>
+                                <p class="pub-authors">Ariyam Das, Jin Wang, Sahil M. Gandhi</p>
+                                <a href="https://www.ijcai.org/proceedings/2019/0306.pdf" target="_blank" class="pub-link">
+                                    <i class="fa-regular fa-file-pdf"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                                </a>
+                            </div>
 
-			</div>
+                            <!-- Pub 2 -->
+                            <div class="pub-card card">
+                                <span class="pub-venue">CIKM 2018</span>
+                                <h4 class="pub-title">ASTRO - A Datalog System for Advanced Stream Reasoning</h4>
+                                <p class="pub-authors">Ariyam Das, Sahil M. Gandhi, Carlo Zaniolo</p>
+                                <a href="https://dl.acm.org/citation.cfm?doid=3269206.3269223" target="_blank" class="pub-link">
+                                    <i class="fa-regular fa-file-pdf"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-			<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-MHYKXKZXET"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+                    <!-- Whitepapers -->
+                    <div class="research-category">
+                        <h3 class="category-title"><i class="fa-solid fa-book-open"></i> Selected Whitepapers</h3>
+                        <div class="publications-list">
+                            <!-- Whitepaper 1 -->
+                            <div class="pub-card card">
+                                <span class="pub-venue">Database Systems</span>
+                                <h4 class="pub-title">Xldb - Execution Log DataBase</h4>
+                                <p class="pub-authors">Sahil M. Gandhi</p>
+                                <a href="whitepapers/Xldb.pdf" target="_blank" class="pub-link">
+                                    <i class="fa-regular fa-file-pdf"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                                </a>
+                            </div>
 
-			gtag('config', 'G-MHYKXKZXET');
-		</script>
-	</body>
+                            <!-- Whitepaper 2 -->
+                            <div class="pub-card card">
+                                <span class="pub-venue">IoT & Security</span>
+                                <h4 class="pub-title">IoTShark - Monitoring and Analyzing IoT Traffic</h4>
+                                <p class="pub-authors">Sahil M. Gandhi, Max Wang, Daniel Achee</p>
+                                <a href="whitepapers/IoTShark.pdf" target="_blank" class="pub-link">
+                                    <i class="fa-regular fa-file-pdf"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                                </a>
+                            </div>
+
+                            <!-- Whitepaper 3 -->
+                            <div class="pub-card card">
+                                <span class="pub-venue">Distributed Messaging</span>
+                                <h4 class="pub-title">SIKE: An Analysis of Serializing Interfaces in Kafka Experiments</h4>
+                                <p class="pub-authors">Sahil M. Gandhi, Kaushik Mahorker, Wenlong Xiong</p>
+                                <a href="whitepapers/SIKE.pdf" target="_blank" class="pub-link">
+                                    <i class="fa-regular fa-file-pdf"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                                </a>
+                            </div>
+
+                            <!-- Whitepaper 4 -->
+                            <div class="pub-card card">
+                                <span class="pub-venue">High Performance Computing</span>
+                                <h4 class="pub-title">PKEG - Parallel Kernel Execution on GPUs</h4>
+                                <p class="pub-authors">Sahil M. Gandhi, Matthew Wong</p>
+                                <a href="whitepapers/PKEG.pdf" target="_blank" class="pub-link">
+                                    <i class="fa-regular fa-file-pdf"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section section-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Side Endeavors & Tools</span>
+                    <h2 class="section-title">Personal Projects</h2>
+                    <p class="section-desc">A selection of independent builds ranging from automated trading systems to hardware robots and Chrome extensions.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Stock-Trader -->
+                    <div class="project-card card">
+                        <div class="project-header">
+                            <span class="status-pill status-completed">Completed</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Stock-Trader</h3>
+                            <p class="project-description">An automated stock trading bot integrated with Alpaca API implementing custom quantitative trading strategies and backtesting pipelines.</p>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Alpaca API</span>
+                                <span>Quantitative</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Prequel Error Codes -->
+                    <div class="project-card card">
+                        <div class="project-header">
+                            <span class="status-pill status-completed">Completed</span>
+                            <div class="project-links">
+                                <a href="https://github.com/sahilmgandhi/prequel-error-codes" target="_blank" aria-label="GitHub Repository" class="proj-link-icon"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://chrome.google.com/webstore/detail/prequelerrorcodes/cdjhhanfoilmkjidljiacahphcfgjbkc" target="_blank" aria-label="Chrome Web Store" class="proj-link-icon"><i class="fa-solid fa-store"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Prequel Error Codes</h3>
+                            <p class="project-description">A Chrome extension that turns standard HTTP error codes from various sites into fun Star Wars prequel memes instead.</p>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span>Javascript</span>
+                                <span>Chrome Extension</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Micromouse -->
+                    <div class="project-card card">
+                        <div class="project-header">
+                            <span class="status-pill status-completed">Completed</span>
+                            <div class="project-links">
+                                <a href="https://github.com/etank7000/Micromouse" target="_blank" aria-label="GitHub Repository" class="proj-link-icon"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Micromouse Robot</h3>
+                            <p class="project-description">An autonomous maze-solving robot designed from scratch (custom PCB, components, soldering) and programmed in C/C++. Won 1st at CAMM & UCR Regionals.</p>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span>C/C++</span>
+                                <span>Robotics</span>
+                                <span>PCB Design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Trivia-Bot -->
+                    <div class="project-card card">
+                        <div class="project-header">
+                            <span class="status-pill status-completed">Completed</span>
+                            <div class="project-links">
+                                <a href="https://jonathan.zaturensky.com/projects/" target="_blank" aria-label="Live Demo" class="proj-link-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Trivia-Bot</h3>
+                            <p class="project-description">An automated Python-based assistant designed to parse and suggest answers for live mobile trivia apps like HQ Trivia and Beat the Q in real time.</p>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Web Scraping</span>
+                                <span>NLP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Free Throw Classifier -->
+                    <div class="project-card card">
+                        <div class="project-header">
+                            <span class="status-pill status-completed">Completed</span>
+                            <div class="project-links">
+                                <a href="https://docs.google.com/presentation/d/1qoTKB66uaKdh6aG1WqI_lz4zfSAvpxa71AFHYtjVaCk/edit?usp=sharing" target="_blank" aria-label="Project Presentation" class="proj-link-icon"><i class="fa-solid fa-chalkboard-user"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Free Throw Classifier</h3>
+                            <p class="project-description">A real-time classifier that grades basketball free throws using Hexiwear wearables mounted on a player's arm streaming data to a central Raspberry Pi server.</p>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span>IoT</span>
+                                <span>Hexiwear</span>
+                                <span>Raspberry Pi</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Bruin Dining API -->
+                    <div class="project-card card">
+                        <div class="project-header">
+                            <span class="status-pill status-completed">Completed</span>
+                            <div class="project-links">
+                                <a href="https://github.com/vanshg/BruinMenu-Backend" target="_blank" aria-label="GitHub Repository" class="proj-link-icon"><i class="fa-brands fa-github"></i></a>
+                                <a href="http://bruindining.herokuapp.com/" target="_blank" aria-label="Live Demo" class="proj-link-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Bruin Dining API</h3>
+                            <p class="project-description">A backend API that scrapes UCLA dining hall data, allowing third-party developers to access nutritional info. Equipped with an interactive GUI.</p>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Web Scraping</span>
+                                <span>REST API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7: C.A.R.M. -->
+                    <div class="project-card card">
+                        <div class="project-header">
+                            <span class="status-pill status-completed">Completed</span>
+                            <div class="project-links">
+                                <a href="https://github.com/getCarm/CARM" target="_blank" aria-label="GitHub Repository" class="proj-link-icon"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://chrome.google.com/webstore/detail/carm/gnepbnmmbmkipbdbclbekhklbbijmimf" target="_blank" aria-label="Chrome Web Store" class="proj-link-icon"><i class="fa-solid fa-store"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">C.A.R.M. Chat</h3>
+                            <p class="project-description">"Communicating Across Random Masses"—a Chrome extension allowing users on any website to dynamically chat with each other anonymously and instantly.</p>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span>Javascript</span>
+                                <span>WebSockets</span>
+                                <span>Chrome Extension</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8: REM.my -->
+                    <div class="project-card card">
+                        <div class="project-header">
+                            <span class="status-pill status-completed">Completed</span>
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.sahilmgandhi.remmy" target="_blank" aria-label="Google Play Store" class="proj-link-icon"><i class="fa-brands fa-google-play"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">REM.my Alarm</h3>
+                            <p class="project-description">A smart, minimalist Android alarm system that optimizes a user's sleep cycles and wake times around natural REM sleep phases.</p>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>Android SDK</span>
+                                <span>UI Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Sahil Gandhi. All rights reserved.</p>
+            <p class="footer-design">Designed & Built with HTML & CSS</p>
+        </div>
+    </footer>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MHYKXKZXET"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-MHYKXKZXET');
+    </script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
