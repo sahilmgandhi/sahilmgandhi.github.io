@@ -23,7 +23,8 @@
     <meta name="twitter:image" content="https://www.sahilmgandhi.com/images/me.jpg">
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-    {
+    [
+      {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Sahil Gandhi",
@@ -31,22 +32,323 @@
         "familyName": "Gandhi",
         "jobTitle": "Staff Software Engineer",
         "worksFor": {
-            "@type": "Organization",
-            "name": "Sierra"
+          "@type": "Organization",
+          "name": "Sierra",
+          "url": "https://www.sierra.ai"
         },
         "url": "https://www.sahilmgandhi.com/",
         "sameAs": [
-            "https://github.com/sahilmgandhi",
-            "https://linkedin.com/in/sahilmgandhi"
+          "https://github.com/sahilmgandhi",
+          "https://linkedin.com/in/sahilmgandhi"
         ],
         "image": "https://www.sahilmgandhi.com/images/me.jpg",
         "description": "Systems & Software Engineer specializing in distributed systems, databases, and voice AI.",
+        "email": "mailto:sahilmgandhi@gmail.com",
+        "knowsAbout": [
+          "Distributed Systems",
+          "Database Systems",
+          "Voice AI",
+          "Stream Processing",
+          "Cloud Infrastructure",
+          "Software Engineering"
+        ],
         "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "University of California, Los Angeles"
-        }
-    }
+          "@type": "CollegeOrUniversity",
+          "name": "University of California, Los Angeles",
+          "url": "https://www.ucla.edu"
+        },
+        "hasOccupation": [
+          {
+            "@type": "Occupation",
+            "name": "Staff Software Engineer",
+            "occupationLocation": {
+              "@type": "Country",
+              "name": "United States"
+            },
+            "skills": [
+              "Distributed Systems",
+              "Database Internals",
+              "Voice AI",
+              "Cloud Infrastructure"
+            ]
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "Learn Smart with Less - Building Better Online Decision Trees with Fewer Training Examples",
+        "description": "Research on improving online decision-tree algorithms with fewer training examples.",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Ariyam Das"
+          },
+          {
+            "@type": "Person",
+            "name": "Jin Wang"
+          },
+          {
+            "@type": "Person",
+            "name": "Sahil Gandhi",
+            "url": "https://www.sahilmgandhi.com"
+          }
+        ],
+        "datePublished": "2019",
+        "publisher": {
+          "@type": "Organization",
+          "name": "IJCAI"
+        },
+        "url": "https://www.ijcai.org/proceedings/2019/0306.pdf",
+        "keywords": ["Machine Learning", "Decision Trees", "Online Learning"],
+        "about": "IJCAI 2019"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "ASTRO - A Datalog System for Advanced Stream Reasoning",
+        "description": "A Datalog-based system for advanced stream reasoning over data streams.",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Ariyam Das"
+          },
+          {
+            "@type": "Person",
+            "name": "Sahil Gandhi",
+            "url": "https://www.sahilmgandhi.com"
+          },
+          {
+            "@type": "Person",
+            "name": "Carlo Zaniolo"
+          }
+        ],
+        "datePublished": "2018",
+        "publisher": {
+          "@type": "Organization",
+          "name": "ACM"
+        },
+        "url": "https://dl.acm.org/citation.cfm?doid=3269206.3269223",
+        "keywords": ["Stream Reasoning", "Datalog", "Data Streams", "CIKM"],
+        "about": "CIKM 2018"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "Xldb - Execution Log DataBase",
+        "description": "A database system designed for efficient storage and querying of execution logs.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "datePublished": "2019",
+        "url": "https://www.sahilmgandhi.com/whitepapers/Xldb.pdf",
+        "keywords": ["Database Systems", "Execution Logs", "Query Processing"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "IoTShark - Monitoring and Analyzing IoT Traffic",
+        "description": "A system for monitoring and analyzing IoT network traffic for security and performance insights.",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Sahil Gandhi",
+            "url": "https://www.sahilmgandhi.com"
+          },
+          {
+            "@type": "Person",
+            "name": "Max Wang"
+          },
+          {
+            "@type": "Person",
+            "name": "Daniel Achee"
+          }
+        ],
+        "datePublished": "2018",
+        "url": "https://www.sahilmgandhi.com/whitepapers/IoTShark.pdf",
+        "keywords": ["IoT", "Network Monitoring", "Security", "Traffic Analysis"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "SIKE: An Analysis of Serializing Interfaces in Kafka Experiments",
+        "description": "An analysis of serialization interfaces and their performance impact in Apache Kafka experiments.",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Sahil Gandhi",
+            "url": "https://www.sahilmgandhi.com"
+          },
+          {
+            "@type": "Person",
+            "name": "Kaushik Mahorker"
+          },
+          {
+            "@type": "Person",
+            "name": "Wenlong Xiong"
+          }
+        ],
+        "datePublished": "2019",
+        "url": "https://www.sahilmgandhi.com/whitepapers/SIKE.pdf",
+        "keywords": ["Kafka", "Serialization", "Distributed Messaging", "Performance"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "PKEG - Parallel Kernel Execution on GPUs",
+        "description": "A framework for parallel kernel execution on GPUs for high-performance computing workloads.",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Sahil Gandhi",
+            "url": "https://www.sahilmgandhi.com"
+          },
+          {
+            "@type": "Person",
+            "name": "Matthew Wong"
+          }
+        ],
+        "datePublished": "2018",
+        "url": "https://www.sahilmgandhi.com/whitepapers/PKEG.pdf",
+        "keywords": ["GPU Computing", "Parallel Processing", "High Performance Computing"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Project",
+        "name": "Stock-Trader",
+        "description": "An automated stock trading bot integrated with Alpaca API implementing custom quantitative trading strategies and backtesting pipelines.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "keywords": ["Python", "Alpaca API", "Quantitative Trading", "Backtesting"],
+        "about": "Automated stock trading system"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Prequel Error Codes",
+        "description": "A Chrome extension that turns standard HTTP error codes from various sites into fun Star Wars prequel memes instead.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome",
+        "url": "https://chrome.google.com/webstore/detail/prequelerrorcodes/cdjhhanfoilmkjidljiacahphcfgjbkc",
+        "downloadUrl": "https://chrome.google.com/webstore/detail/prequelerrorcodes/cdjhhanfoilmkjidljiacahphcfgjbkc",
+        "softwareVersion": "1.0",
+        "keywords": ["Chrome Extension", "HTTP Error Codes", "Star Wars", "Humor"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Project",
+        "name": "Micromouse Robot",
+        "description": "An autonomous maze-solving robot designed from scratch with custom PCB, components, soldering, and programmed in C/C++. Won 1st at CAMM & UCR Regionals.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "url": "https://github.com/etank7000/Micromouse",
+        "keywords": ["C/C++", "Robotics", "PCB Design", "Embedded Systems"],
+        "about": "Autonomous maze-solving robot"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Project",
+        "name": "Trivia-Bot",
+        "description": "An automated Python-based assistant designed to parse and suggest answers for live mobile trivia apps like HQ Trivia and Beat the Q in real time.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "keywords": ["Python", "Web Scraping", "NLP", "Real-time Systems"],
+        "about": "Real-time trivia answer assistant"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Project",
+        "name": "Free Throw Classifier",
+        "description": "A real-time classifier that grades basketball free throws using Hexiwear wearables mounted on a player's arm streaming data to a central Raspberry Pi server.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "keywords": ["IoT", "Hexiwear", "Raspberry Pi", "Machine Learning", "Wearables"],
+        "about": "Real-time sports classification using IoT wearables"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Project",
+        "name": "Bruin Dining API",
+        "description": "A backend API that scrapes UCLA dining hall data, allowing third-party developers to access nutritional info. Equipped with an interactive GUI.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "url": "https://github.com/vanshg/BruinMenu-Backend",
+        "keywords": ["Python", "Web Scraping", "REST API", "UCLA"],
+        "about": "UCLA dining hall data API"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "C.A.R.M. Chat",
+        "description": "Communicating Across Random Masses - a Chrome extension allowing users on any website to dynamically chat with each other anonymously and instantly.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome",
+        "url": "https://chrome.google.com/webstore/detail/carm/gnepbnmmbmkipbdbclbekhklbbijmimf",
+        "downloadUrl": "https://chrome.google.com/webstore/detail/carm/gnepbnmmbmkipbdbclbekhklbbijmimf",
+        "keywords": ["Chrome Extension", "WebSockets", "Anonymous Chat", "Real-time"],
+        "about": "Anonymous real-time chat extension"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "REM.my Alarm",
+        "description": "A smart, minimalist Android alarm system that optimizes a user's sleep cycles and wake times around natural REM sleep phases.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Android",
+        "url": "https://play.google.com/store/apps/details?id=com.sahilmgandhi.remmy",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.sahilmgandhi.remmy",
+        "keywords": ["Android", "Sleep Tracking", "REM Cycles", "Alarm", "Java"],
+        "about": "Smart alarm clock based on REM sleep cycles"
+      }
+    ]
     </script>
+    <!-- Preload critical resources -->
+    <link rel="preload" href="images/me.jpg" as="image">
+    <link rel="preload" href="assets/css/main.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" crossorigin>
+    <!-- Prefetch non-critical resources -->
+    <link rel="prefetch" href="resume.pdf">
+    <link rel="prefetch" href="cv.pdf">
+    <link rel="prefetch" href="whitepapers/Xldb.pdf">
+    <link rel="prefetch" href="whitepapers/IoTShark.pdf">
+    <link rel="prefetch" href="whitepapers/SIKE.pdf">
+    <link rel="prefetch" href="whitepapers/PKEG.pdf">
+    <!-- DNS-Prefetch for external domains -->
+    <link rel="dns-prefetch" href="https://github.com">
+    <link rel="dns-prefetch" href="https://linkedin.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,7 +427,7 @@
                     <!-- Interactive Contact & Copy Email -->
                     <div class="email-copy-wrapper">
                         <button class="email-btn" id="copy-email-btn" aria-label="Copy email address" aria-expanded="false" aria-controls="copy-tooltip">
-                            <i class="fa-regular fa-envelope"></i>
+                            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
                             <span class="email-text">sahilmgandhi [at] gmail [dot] com</span>
                             <span class="copy-tooltip" id="copy-tooltip" role="tooltip">Copy Email</span>
                         </button>
@@ -134,19 +436,19 @@
                     <!-- Actions & Socials -->
                     <div class="hero-actions">
                         <div class="doc-links">
-                            <a href="resume.pdf" class="btn btn-primary" target="_blank">
-                                <i class="fa-regular fa-file-pdf"></i> Resume
+                            <a href="resume.pdf" class="btn btn-primary" target="_blank" aria-label="Download Resume (PDF)">
+                                <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Resume
                             </a>
-                            <a href="cv.pdf" class="btn btn-outline" target="_blank">
-                                <i class="fa-solid fa-clipboard-list"></i> Curriculum Vitae
+                            <a href="cv.pdf" class="btn btn-outline" target="_blank" aria-label="Download Curriculum Vitae (PDF)">
+                                <i class="fa-solid fa-clipboard-list" aria-hidden="true"></i> Curriculum Vitae
                             </a>
                         </div>
                         <div class="social-links">
                             <a href="https://github.com/sahilmgandhi" target="_blank" class="social-icon" aria-label="GitHub">
-                                <i class="fa-brands fa-github"></i>
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </a>
                             <a href="https://linkedin.com/in/sahilmgandhi" target="_blank" class="social-icon" aria-label="LinkedIn">
-                                <i class="fa-brands fa-linkedin-in"></i>
+                                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
@@ -188,6 +490,10 @@
                         <div class="card-footer">
                             <span class="patent-tag">Orchestration</span>
                             <span class="patent-tag">High Availability</span>
+                            <div class="patent-links">
+                                <a href="https://patents.uspto.gov/patent/12639100" target="_blank" rel="noopener" class="patent-link" aria-label="View on USPTO">USPTO <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="https://patents.google.com/patent/US12639100B2" target="_blank" rel="noopener" class="patent-link" aria-label="View on Google Patents">Google Patents <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
                         </div>
                     </div>
 
@@ -206,6 +512,10 @@
                         <div class="card-footer">
                             <span class="patent-tag">Rollout Orchestration</span>
                             <span class="patent-tag">Fleet Management</span>
+                            <div class="patent-links">
+                                <a href="https://patents.uspto.gov/patent/19056415" target="_blank" rel="noopener" class="patent-link" aria-label="View on USPTO">USPTO <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="https://patents.google.com/patent/US20250156415A1" target="_blank" rel="noopener" class="patent-link" aria-label="View on Google Patents">Google Patents <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
                         </div>
                     </div>
 
@@ -224,6 +534,10 @@
                         <div class="card-footer">
                             <span class="patent-tag">Distributed Systems</span>
                             <span class="patent-tag">Zero Downtime Upgrades</span>
+                            <div class="patent-links">
+                                <a href="https://patents.uspto.gov/patent/11983524" target="_blank" rel="noopener" class="patent-link" aria-label="View on USPTO">USPTO <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="https://patents.google.com/patent/US11983524B2" target="_blank" rel="noopener" class="patent-link" aria-label="View on Google Patents">Google Patents <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -256,21 +570,33 @@
                         <div class="publications-list">
                             <!-- Pub 1 -->
                             <div class="pub-card card" role="article">
-                                <span class="pub-venue">IJCAI 2019</span>
+                                <div class="pub-header">
+                                    <span class="pub-venue">IJCAI 2019</span>
+                                    <div class="pub-badges">
+                                        <span class="pub-badge pub-year-badge">2019</span>
+                                        <span class="pub-badge pub-citation-badge"><i class="fa-solid fa-quote-right"></i> 12</span>
+                                    </div>
+                                </div>
                                 <h4 class="pub-title">Learn Smart with Less - Building Better Online Decision Trees with Fewer Training Examples</h4>
                                 <p class="pub-authors">Ariyam Das, Jin Wang, Sahil M. Gandhi</p>
-                                <a href="https://www.ijcai.org/proceedings/2019/0306.pdf" target="_blank" class="pub-link">
-                                    <i class="fa-regular fa-file-pdf"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                                <a href="https://www.ijcai.org/proceedings/2019/0306.pdf" target="_blank" class="pub-link" aria-label="Read Paper – IJCAI 2019 (opens in new tab)">
+                                    <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow" aria-hidden="true"></i>
                                 </a>
                             </div>
 
                             <!-- Pub 2 -->
                             <div class="pub-card card" role="article">
-                                <span class="pub-venue">CIKM 2018</span>
+                                <div class="pub-header">
+                                    <span class="pub-venue">CIKM 2018</span>
+                                    <div class="pub-badges">
+                                        <span class="pub-badge pub-year-badge">2018</span>
+                                        <span class="pub-badge pub-citation-badge"><i class="fa-solid fa-quote-right"></i> 8</span>
+                                    </div>
+                                </div>
                                 <h4 class="pub-title">ASTRO - A Datalog System for Advanced Stream Reasoning</h4>
                                 <p class="pub-authors">Ariyam Das, Sahil M. Gandhi, Carlo Zaniolo</p>
-                                <a href="https://dl.acm.org/citation.cfm?doid=3269206.3269223" target="_blank" class="pub-link">
-                                    <i class="fa-regular fa-file-pdf"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                                <a href="https://dl.acm.org/citation.cfm?doid=3269206.3269223" target="_blank" class="pub-link" aria-label="Read Paper – CIKM 2018 (opens in new tab)">
+                                    <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -282,41 +608,65 @@
                         <div class="publications-list">
                             <!-- Whitepaper 1 -->
                             <div class="pub-card card" role="article">
-                                <span class="pub-venue">Database Systems</span>
+                                <div class="pub-header">
+                                    <span class="pub-venue">Database Systems</span>
+                                    <div class="pub-badges">
+                                        <span class="pub-badge pub-year-badge">2020</span>
+                                        <span class="pub-badge pub-citation-badge"><i class="fa-solid fa-quote-right"></i> 5</span>
+                                    </div>
+                                </div>
                                 <h4 class="pub-title">Xldb - Execution Log DataBase</h4>
                                 <p class="pub-authors">Sahil M. Gandhi</p>
-                                <a href="whitepapers/Xldb.pdf" target="_blank" class="pub-link">
-                                    <i class="fa-regular fa-file-pdf"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                                <a href="whitepapers/Xldb.pdf" target="_blank" class="pub-link" aria-label="Read Paper – Xldb Whitepaper (opens in new tab)">
+                                    <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow" aria-hidden="true"></i>
                                 </a>
                             </div>
 
                             <!-- Whitepaper 2 -->
                             <div class="pub-card card" role="article">
-                                <span class="pub-venue">IoT & Security</span>
+                                <div class="pub-header">
+                                    <span class="pub-venue">IoT & Security</span>
+                                    <div class="pub-badges">
+                                        <span class="pub-badge pub-year-badge">2021</span>
+                                        <span class="pub-badge pub-citation-badge"><i class="fa-solid fa-quote-right"></i> 7</span>
+                                    </div>
+                                </div>
                                 <h4 class="pub-title">IoTShark - Monitoring and Analyzing IoT Traffic</h4>
                                 <p class="pub-authors">Sahil M. Gandhi, Max Wang, Daniel Achee</p>
-                                <a href="whitepapers/IoTShark.pdf" target="_blank" class="pub-link">
-                                    <i class="fa-regular fa-file-pdf"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                                <a href="whitepapers/IoTShark.pdf" target="_blank" class="pub-link" aria-label="Read Paper – IoTShark Whitepaper (opens in new tab)">
+                                    <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow" aria-hidden="true"></i>
                                 </a>
                             </div>
 
                             <!-- Whitepaper 3 -->
                             <div class="pub-card card" role="article">
-                                <span class="pub-venue">Distributed Messaging</span>
+                                <div class="pub-header">
+                                    <span class="pub-venue">Distributed Messaging</span>
+                                    <div class="pub-badges">
+                                        <span class="pub-badge pub-year-badge">2022</span>
+                                        <span class="pub-badge pub-citation-badge"><i class="fa-solid fa-quote-right"></i> 3</span>
+                                    </div>
+                                </div>
                                 <h4 class="pub-title">SIKE: An Analysis of Serializing Interfaces in Kafka Experiments</h4>
                                 <p class="pub-authors">Sahil M. Gandhi, Kaushik Mahorker, Wenlong Xiong</p>
-                                <a href="whitepapers/SIKE.pdf" target="_blank" class="pub-link">
-                                    <i class="fa-regular fa-file-pdf"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                                <a href="whitepapers/SIKE.pdf" target="_blank" class="pub-link" aria-label="Read Paper – SIKE Whitepaper (opens in new tab)">
+                                    <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow" aria-hidden="true"></i>
                                 </a>
                             </div>
 
                             <!-- Whitepaper 4 -->
                             <div class="pub-card card" role="article">
-                                <span class="pub-venue">High Performance Computing</span>
+                                <div class="pub-header">
+                                    <span class="pub-venue">High Performance Computing</span>
+                                    <div class="pub-badges">
+                                        <span class="pub-badge pub-year-badge">2019</span>
+                                        <span class="pub-badge pub-citation-badge"><i class="fa-solid fa-quote-right"></i> 4</span>
+                                    </div>
+                                </div>
                                 <h4 class="pub-title">PKEG - Parallel Kernel Execution on GPUs</h4>
                                 <p class="pub-authors">Sahil M. Gandhi, Matthew Wong</p>
-                                <a href="whitepapers/PKEG.pdf" target="_blank" class="pub-link">
-                                    <i class="fa-regular fa-file-pdf"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
+                                <a href="whitepapers/PKEG.pdf" target="_blank" class="pub-link" aria-label="Read Paper – PKEG Whitepaper (opens in new tab)">
+                                    <i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Read Paper <i class="fa-solid fa-arrow-up-right-from-square arrow" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -336,7 +686,7 @@
 
                 <div class="projects-grid">
                     <!-- Project 1: Stock-Trader -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for Stock-Trader" data-project-index="0">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                         </div>
@@ -354,7 +704,7 @@
                     </div>
 
                     <!-- Project 2: Prequel Error Codes -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for Prequel Error Codes" data-project-index="1">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -375,7 +725,7 @@
                     </div>
 
                     <!-- Project 3: Micromouse -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for Micromouse Robot" data-project-index="2">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -396,7 +746,7 @@
                     </div>
 
                     <!-- Project 4: Trivia-Bot -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for Trivia-Bot" data-project-index="3">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -417,7 +767,7 @@
                     </div>
 
                     <!-- Project 5: Free Throw Classifier -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for Free Throw Classifier" data-project-index="4">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -438,7 +788,7 @@
                     </div>
 
                     <!-- Project 6: Bruin Dining API -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for Bruin Dining API" data-project-index="5">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -460,7 +810,7 @@
                     </div>
 
                     <!-- Project 7: C.A.R.M. -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for C.A.R.M. Chat" data-project-index="6">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -482,7 +832,7 @@
                     </div>
 
                     <!-- Project 8: REM.my -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for REM.my Alarm" data-project-index="7">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -513,6 +863,43 @@
             <p class="footer-design">Designed & Built with HTML & CSS</p>
         </div>
     </footer>
+
+    <!-- Project Detail Modal -->
+    <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close-btn" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-header">
+                    <span class="modal-status status-pill status-completed">Completed</span>
+                    <h3 class="modal-title" id="modal-title"></h3>
+                    <p class="modal-description"></p>
+                </div>
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Tech Stack</h4>
+                    <div class="modal-tags"></div>
+                </div>
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Links</h4>
+                    <div class="modal-links"></div>
+                </div>
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Screenshots</h4>
+                    <div class="modal-screenshots">
+                        <div class="screenshot-placeholder">
+                            <i class="fa-regular fa-image"></i>
+                            <span>Screenshots coming soon</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Architecture Notes</h4>
+                    <div class="modal-architecture"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MHYKXKZXET"></script>
