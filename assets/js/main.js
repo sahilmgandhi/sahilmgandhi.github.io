@@ -118,4 +118,24 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', scrollActive);
     // Trigger scroll spy on load
     scrollActive();
+
+    // ==========================================================================
+    // Reveal Animation: IntersectionObserver for .reveal elements
+    // ==========================================================================
+    if ('IntersectionObserver' in window) {
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    } else {
+        // Fallback: show everything immediately
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('revealed'));
+    }
 });

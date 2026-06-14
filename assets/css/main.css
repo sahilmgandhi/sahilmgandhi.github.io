@@ -505,6 +505,187 @@ body {
 }
 
 /* ==========================================================================
+   Reveal Animation
+   ========================================================================== */
+@keyframes reveal-up {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+}
+
+.reveal.revealed {
+    animation: reveal-up 0.5s ease forwards;
+}
+
+.reveal-delay-1 { animation-delay: 0.1s; }
+.reveal-delay-2 { animation-delay: 0.25s; }
+.reveal-delay-3 { animation-delay: 0.4s; }
+
+/* ==========================================================================
+   Career Timeline Section
+   ========================================================================== */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--card-border);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 0 2.5rem 3rem;
+}
+
+.timeline-left {
+    left: 0;
+    padding-right: 2.5rem;
+}
+
+.timeline-right {
+    left: 50%;
+    padding-left: 2.5rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 0.25rem;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.timeline-left .timeline-dot {
+    right: -7px;
+}
+
+.timeline-right .timeline-dot {
+    left: -7px;
+}
+
+.timeline-dot i {
+    font-size: 14px;
+    color: var(--accent-blue);
+}
+
+.timeline-card {
+    padding: 1.5rem;
+}
+
+.timeline-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.35rem;
+}
+
+.timeline-company {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-cyan);
+    white-space: nowrap;
+}
+
+.timeline-role {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--tag-text);
+    background-color: var(--tag-bg);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+.timeline-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.timeline-bullets li {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.timeline-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--accent-blue);
+}
+
+/* Responsive: stacked on mobile */
+@media screen and (max-width: 768px) {
+    .timeline-line {
+        left: 0;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 2rem;
+        padding-right: 0;
+    }
+
+    .timeline-left,
+    .timeline-right {
+        left: 0;
+        padding-left: 2rem;
+        padding-right: 0;
+    }
+
+    .timeline-left .timeline-dot,
+    .timeline-right .timeline-dot {
+        left: -7px;
+        right: auto;
+    }
+
+    .timeline-card-header {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+}
+
+/* ==========================================================================
    Patents Section
    ========================================================================== */
 .patents-grid {
