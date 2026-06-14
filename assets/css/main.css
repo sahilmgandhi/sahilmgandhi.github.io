@@ -1216,25 +1216,6 @@ html.theme-transition .section-bg {
     font-size: 0.9rem;
 }
 
-.screenshot-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 2rem;
-    background-color: var(--bg-primary);
-    border: 1px dashed var(--card-border);
-    border-radius: 4px;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
-.screenshot-placeholder i {
-    font-size: 1.5rem;
-    opacity: 0.5;
-}
-
 .modal-architecture {
     font-size: 0.9rem;
     color: var(--text-secondary);
