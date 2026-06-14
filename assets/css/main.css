@@ -505,6 +505,94 @@ body {
 }
 
 /* ==========================================================================
+   Skills / Tech Stack Section
+   ========================================================================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-category-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.skill-category-title i {
+    color: var(--accent-blue);
+    font-size: 0.95rem;
+}
+
+.skill-chips {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.skill-chip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    background-color: rgba(59, 130, 246, 0.04);
+    border: 1px solid rgba(59, 130, 246, 0.08);
+    border-radius: 4px;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.skill-chip:hover {
+    border-color: rgba(59, 130, 246, 0.2);
+    background-color: rgba(59, 130, 246, 0.07);
+}
+
+.skill-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.skill-dots {
+    display: flex;
+    gap: 4px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--card-border);
+    transition: background-color var(--transition-fast);
+}
+
+.dot.filled {
+    background-color: var(--accent-blue);
+}
+
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
    Patents Section
    ========================================================================== */
 .patents-grid {
@@ -821,6 +909,11 @@ body {
     }
 
     .patents-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .skills-grid {
         grid-template-columns: 1fr;
         gap: 1.25rem;
     }
