@@ -55,28 +55,52 @@ html {
     --transition-fast: 0.15s ease;
     --transition-normal: 0.25s ease;
 
-    /* Slate & Steel Blue Color Palette */
+    /* Dark Theme (default) */
     --bg-primary: #0b0f19;       /* Deep slate navy background */
     --bg-secondary: #0f1626;     /* Slightly lighter navy for sections */
     --card-bg: #131c2e;          /* Solid dark slate for card surfaces */
     --card-border: #1e293b;      /* Slate-800 border line */
     --card-hover-border: #3b82f6;/* Sharp blue border for active states */
-    
+
     --text-primary: #f8fafc;     /* Slate-50 */
     --text-secondary: #cbd5e1;   /* Slate-300 */
     --text-muted: #64748b;       /* Slate-500 */
-    
+
     --accent-blue: #3b82f6;      /* Steel Blue */
     --accent-cyan: #06b6d4;      /* Clean Cyan */
     --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
     --bg-glow: rgba(59, 130, 246, 0.03);
-    
+
     --tag-bg: rgba(59, 130, 246, 0.08);
     --tag-text: #60a5fa;
     --header-bg: rgba(11, 15, 25, 0.85);
-    
+
     --status-completed-bg: rgba(6, 182, 212, 0.08);
     --status-completed-text: #22d3ee;
+}
+
+[data-theme="light"] {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+    --card-hover-border: #3b82f6;
+
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+
+    --accent-blue: #2563eb;
+    --accent-cyan: #0891b2;
+    --accent-gradient: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+    --bg-glow: rgba(59, 130, 246, 0.05);
+
+    --tag-bg: rgba(37, 99, 235, 0.08);
+    --tag-text: #2563eb;
+    --header-bg: rgba(248, 250, 252, 0.85);
+
+    --status-completed-bg: rgba(8, 145, 178, 0.08);
+    --status-completed-text: #0891b2;
 }
 
 body {
@@ -293,6 +317,7 @@ body {
 .header-actions {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
 .menu-toggle {
@@ -308,6 +333,102 @@ body {
     height: 2px;
     background-color: var(--text-primary);
     transition: all var(--transition-normal);
+}
+
+/* ==========================================================================
+   Theme Toggle Button
+   ========================================================================== */
+.no-transition,
+.no-transition *,
+.no-transition *::before,
+.no-transition *::after {
+    transition: none !important;
+}
+
+html.theme-transition {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.theme-transition body,
+html.theme-transition .header,
+html.theme-transition .card,
+html.theme-transition .footer,
+html.theme-transition .section-bg {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    position: relative;
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.theme-toggle-track {
+    display: flex;
+    align-items: center;
+    width: 44px;
+    height: 24px;
+    background-color: var(--card-border);
+    border-radius: 999px;
+    padding: 2px;
+    position: relative;
+    transition: background-color var(--transition-normal);
+}
+
+[data-theme="light"] .theme-toggle-track {
+    background-color: #cbd5e1;
+}
+
+.theme-toggle-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: var(--text-primary);
+    border-radius: 50%;
+    transition: transform var(--transition-normal), background-color var(--transition-normal);
+    position: relative;
+    z-index: 1;
+}
+
+[data-theme="light"] .theme-toggle-thumb {
+    transform: translateX(20px);
+    background-color: var(--accent-blue);
+}
+
+.theme-toggle-thumb .icon-sun,
+.theme-toggle-thumb .icon-moon {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    transition: opacity var(--transition-normal);
+}
+
+.theme-toggle-thumb .icon-sun {
+    display: none;
+}
+
+.theme-toggle-thumb .icon-moon {
+    display: block;
+}
+
+[data-theme="light"] .theme-toggle-thumb .icon-sun {
+    display: block;
+}
+
+[data-theme="light"] .theme-toggle-thumb .icon-moon {
+    display: none;
 }
 
 /* ==========================================================================

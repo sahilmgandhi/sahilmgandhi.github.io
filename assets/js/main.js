@@ -2,40 +2,49 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     // Theme Toggle
     // ==========================================================================
-    const html = document.documentElement;
-    const themeToggle = document.getElementById('theme-toggle');
     const STORAGE_KEY = 'theme';
+    const htmlEl = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
-    const getPreferredTheme = () => {
-        const stored = localStorage.getItem(STORAGE_KEY);
-        if (stored) return stored;
-        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    const applyTheme = (theme, persist = false) => {
+        htmlEl.setAttribute('data-theme', theme);
+        themeToggle.setAttribute('aria-checked', theme === 'dark');
+        if (persist) {
+            localStorage.setItem(STORAGE_KEY, theme);
+        }
     };
 
-    const setTheme = (theme) => {
-        html.setAttribute('data-theme', theme);
-        localStorage.setItem(STORAGE_KEY, theme);
-    };
+    // Determine initial theme: localStorage > OS preference > dark
+    const stored = localStorage.getItem(STORAGE_KEY);
+    const initialTheme = stored || (prefersDark.matches ? 'dark' : 'light');
+    applyTheme(initialTheme);
 
-    // Apply stored/preferred theme immediately, then allow transitions
-    setTheme(getPreferredTheme());
-    requestAnimationFrame(() => {
-        html.classList.remove('no-transition');
+    themeToggle.addEventListener('click', () => {
+        const next = htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        applyTheme(next, true);
     });
 
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const current = html.getAttribute('data-theme');
-            setTheme(current === 'dark' ? 'light' : 'dark');
-        });
-    }
-
-    // Sync if OS preference changes while page is open
-    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+    // Follow OS changes only when no manual override exists
+    prefersDark.addEventListener('change', (e) => {
         if (!localStorage.getItem(STORAGE_KEY)) {
-            setTheme(e.matches ? 'light' : 'dark');
+            applyTheme(e.matches ? 'dark' : 'light');
         }
     });
+
+    // Remove no-transition class after first paint
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            htmlEl.classList.remove('no-transition');
+        });
+    });
+    // ==========================================================================
+    // Dynamic Footer Year
+    // ==========================================================================
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 
     // ==========================================================================
     // Mobile Navigation Menu Toggle
