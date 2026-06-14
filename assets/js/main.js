@@ -118,4 +118,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', scrollActive);
     // Trigger scroll spy on load
     scrollActive();
+
+    // ==========================================================================
+    // Service Worker Registration
+    // ==========================================================================
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+    }
 });
