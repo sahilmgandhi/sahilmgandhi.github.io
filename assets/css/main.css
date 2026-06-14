@@ -304,6 +304,7 @@ body {
 
 .badge-row {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1.25rem;
 }
@@ -346,6 +347,8 @@ body {
     font-family: var(--font-sans);
     font-size: 0.85rem;
     transition: all var(--transition-fast);
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .email-btn:hover {
@@ -355,6 +358,12 @@ body {
 
 .email-btn i {
     color: var(--accent-blue);
+}
+
+.email-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .copy-tooltip {
@@ -792,8 +801,13 @@ body {
         padding: 4.5rem 0;
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    .hero {
+        min-height: auto;
+        padding-top: 6rem;
+    }
+
+    .hero-container {
+        gap: 1.5rem;
     }
 
     .menu-toggle {
@@ -840,10 +854,6 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-
     .doc-links {
         width: 100%;
         flex-direction: column;
@@ -856,5 +866,9 @@ body {
     .profile-card {
         width: 240px;
         height: 240px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
