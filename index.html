@@ -331,7 +331,7 @@
 
                 <div class="projects-grid">
                     <!-- Project 1: Stock-Trader -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for Stock-Trader" data-project-index="0">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                         </div>
@@ -349,7 +349,7 @@
                     </div>
 
                     <!-- Project 2: Prequel Error Codes -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for Prequel Error Codes" data-project-index="1">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -370,7 +370,7 @@
                     </div>
 
                     <!-- Project 3: Micromouse -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for Micromouse Robot" data-project-index="2">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -391,7 +391,7 @@
                     </div>
 
                     <!-- Project 4: Trivia-Bot -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for Trivia-Bot" data-project-index="3">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -412,7 +412,7 @@
                     </div>
 
                     <!-- Project 5: Free Throw Classifier -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for Free Throw Classifier" data-project-index="4">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -433,7 +433,7 @@
                     </div>
 
                     <!-- Project 6: Bruin Dining API -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for Bruin Dining API" data-project-index="5">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -455,7 +455,7 @@
                     </div>
 
                     <!-- Project 7: C.A.R.M. -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for C.A.R.M. Chat" data-project-index="6">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -477,7 +477,7 @@
                     </div>
 
                     <!-- Project 8: REM.my -->
-                    <div class="project-card card" role="article">
+                    <div class="project-card card" role="button" tabindex="0" aria-label="View details for REM.my Alarm" data-project-index="7">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -508,6 +508,43 @@
             <p class="footer-design">Designed & Built with HTML & CSS</p>
         </div>
     </footer>
+
+    <!-- Project Detail Modal -->
+    <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close-btn" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-header">
+                    <span class="modal-status status-pill status-completed">Completed</span>
+                    <h3 class="modal-title" id="modal-title"></h3>
+                    <p class="modal-description"></p>
+                </div>
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Tech Stack</h4>
+                    <div class="modal-tags"></div>
+                </div>
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Links</h4>
+                    <div class="modal-links"></div>
+                </div>
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Screenshots</h4>
+                    <div class="modal-screenshots">
+                        <div class="screenshot-placeholder">
+                            <i class="fa-regular fa-image"></i>
+                            <span>Screenshots coming soon</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Architecture Notes</h4>
+                    <div class="modal-architecture"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MHYKXKZXET"></script>
