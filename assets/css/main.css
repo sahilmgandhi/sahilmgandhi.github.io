@@ -803,6 +803,222 @@ body {
 }
 
 /* ==========================================================================
+   Project Modal
+   ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+.modal-overlay[hidden] {
+    display: none;
+}
+
+.modal-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-container {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 6px;
+    width: 100%;
+    max-width: 640px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(16px) scale(0.98);
+    transition: transform var(--transition-normal);
+}
+
+.modal-overlay.is-open .modal-container {
+    transform: translateY(0) scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--card-border);
+    background-color: var(--bg-primary);
+    color: var(--text-muted);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    z-index: 1;
+}
+
+.modal-close:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-header {
+    margin-bottom: 1.75rem;
+}
+
+.modal-status {
+    margin-bottom: 0.75rem;
+    display: inline-block;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    padding-right: 2rem;
+}
+
+.modal-description {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.modal-section {
+    margin-bottom: 1.5rem;
+}
+
+.modal-section:last-child {
+    margin-bottom: 0;
+}
+
+.modal-section-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-cyan);
+    margin-bottom: 0.65rem;
+}
+
+.modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.modal-tags span {
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: var(--tag-bg);
+    color: var(--tag-text);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    padding: 0.2rem 0.55rem;
+    border-radius: 3px;
+}
+
+.modal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+}
+
+.modal-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--card-border);
+    border-radius: 4px;
+    transition: all var(--transition-fast);
+}
+
+.modal-link:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-blue);
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+.modal-link i {
+    font-size: 0.9rem;
+}
+
+.screenshot-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem;
+    background-color: var(--bg-primary);
+    border: 1px dashed var(--card-border);
+    border-radius: 4px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.screenshot-placeholder i {
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+.modal-architecture {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--card-border);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+}
+
+.modal-architecture ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+}
+
+.modal-architecture li {
+    padding: 0.2rem 0;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.modal-architecture li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 4px;
+    height: 4px;
+    background-color: var(--accent-blue);
+    border-radius: 50%;
+}
+
+/* Body scroll lock when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */
 @media screen and (max-width: 992px) {
@@ -905,5 +1121,25 @@ body {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .modal-overlay {
+        padding: 1rem;
+        align-items: flex-end;
+    }
+
+    .modal-container {
+        max-height: 90vh;
+        border-radius: 6px 6px 0 0;
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+    }
+
+    .modal-title {
+        font-size: 1.25rem;
     }
 }
