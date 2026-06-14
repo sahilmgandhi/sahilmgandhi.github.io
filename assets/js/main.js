@@ -88,6 +88,139 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================================================
+    // Contact Form
+    // ==========================================================================
+    const contactForm = document.getElementById('contact-form');
+    const contactSubmit = document.getElementById('contact-submit');
+
+    if (contactForm) {
+        const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        const fields = {
+            name: {
+                el: document.getElementById('contact-name'),
+                error: document.getElementById('contact-name-error'),
+                validate: (v) => v.trim() ? '' : 'Please enter your name.'
+            },
+            email: {
+                el: document.getElementById('contact-email'),
+                error: document.getElementById('contact-email-error'),
+                validate: (v) => {
+                    if (!v.trim()) return 'Please enter your email.';
+                    if (!EMAIL_RE.test(v.trim())) return 'Please enter a valid email address.';
+                    return '';
+                }
+            },
+            subject: {
+                el: document.getElementById('contact-subject'),
+                error: document.getElementById('contact-subject-error'),
+                validate: (v) => v.trim() ? '' : 'Please enter a subject.'
+            },
+            message: {
+                el: document.getElementById('contact-message'),
+                error: document.getElementById('contact-message-error'),
+                validate: (v) => v.trim() ? '' : 'Please enter a message.'
+            }
+        };
+
+        const showError = (field, msg) => {
+            field.error.textContent = msg;
+            field.el.classList.add('error');
+        };
+
+        const clearError = (field) => {
+            field.error.textContent = '';
+            field.el.classList.remove('error');
+        };
+
+        const validateAll = () => {
+            let valid = true;
+            for (const key in fields) {
+                const err = fields[key].validate(fields[key].el.value);
+                if (err) {
+                    showError(fields[key], err);
+                    valid = false;
+                } else {
+                    clearError(fields[key]);
+                }
+            }
+            return valid;
+        };
+
+        // Live validation on blur
+        for (const key in fields) {
+            fields[key].el.addEventListener('blur', () => {
+                const err = fields[key].validate(fields[key].el.value);
+                if (err) showError(fields[key], err);
+                else clearError(fields[key]);
+            });
+            fields[key].el.addEventListener('input', () => {
+                if (fields[key].el.classList.contains('error')) {
+                    const err = fields[key].validate(fields[key].el.value);
+                    if (!err) clearError(fields[key]);
+                }
+            });
+        }
+
+        // Toast notifications
+        const showToast = (type, message) => {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = `toast toast-${type}`;
+            const icon = type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation';
+            toast.innerHTML = `
+                <i class="fa-solid ${icon} toast-icon"></i>
+                <span class="toast-message">${message}</span>
+            `;
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.add('toast-out');
+                toast.addEventListener('animationend', () => toast.remove());
+            }, 4000);
+        };
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Honeypot check
+            const honeypot = contactForm.querySelector('input[name="website"]');
+            if (honeypot && honeypot.value) return;
+
+            if (!validateAll()) return;
+
+            contactSubmit.classList.add('loading');
+            contactSubmit.disabled = true;
+
+            const formData = new FormData(contactForm);
+            // Remove honeypot from submission
+            formData.delete('website');
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    showToast('success', 'Message sent successfully! I\'ll get back to you soon.');
+                    contactForm.reset();
+                    for (const key in fields) clearError(fields[key]);
+                } else {
+                    const data = await response.json().catch(() => null);
+                    const msg = data?.errors?.[0]?.message || 'Something went wrong. Please try again.';
+                    showToast('error', msg);
+                }
+            } catch {
+                showToast('error', 'Network error. Please check your connection and try again.');
+            } finally {
+                contactSubmit.classList.remove('loading');
+                contactSubmit.disabled = false;
+            }
+        });
+    }
+
+    // ==========================================================================
     // ScrollSpy: Active Section Navigation Highlighting
     // ==========================================================================
     const sections = document.querySelectorAll('section[id]');
