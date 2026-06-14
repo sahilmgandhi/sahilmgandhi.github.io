@@ -1,5 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
+    // Theme Toggle
+    // ==========================================================================
+    const STORAGE_KEY = 'theme';
+    const htmlEl = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const applyTheme = (theme, persist = false) => {
+        htmlEl.setAttribute('data-theme', theme);
+        themeToggle.setAttribute('aria-checked', theme === 'dark');
+        if (persist) {
+            localStorage.setItem(STORAGE_KEY, theme);
+        }
+    };
+
+    // Determine initial theme: localStorage > OS preference > dark
+    const stored = localStorage.getItem(STORAGE_KEY);
+    const initialTheme = stored || (prefersDark.matches ? 'dark' : 'light');
+    applyTheme(initialTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const next = htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        applyTheme(next, true);
+    });
+
+    // Follow OS changes only when no manual override exists
+    prefersDark.addEventListener('change', (e) => {
+        if (!localStorage.getItem(STORAGE_KEY)) {
+            applyTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+
+    // Remove no-transition class after first paint
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            htmlEl.classList.remove('no-transition');
+        });
+    });
+    // ==========================================================================
+    // Dynamic Footer Year
+    // ==========================================================================
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+
+    // ==========================================================================
     // Mobile Navigation Menu Toggle
     // ==========================================================================
     const menuToggleBtn = document.getElementById('menu-toggle-btn');
