@@ -88,6 +88,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================================================
+    // Scroll-Reveal: Fade + Slide Up Animations
+    // ==========================================================================
+    const revealElements = document.querySelectorAll('.reveal');
+    if (revealElements.length > 0 && 'IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    }
+
+    // ==========================================================================
     // ScrollSpy: Active Section Navigation Highlighting
     // ==========================================================================
     const sections = document.querySelectorAll('section[id]');
