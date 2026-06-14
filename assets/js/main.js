@@ -1,5 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
+    // Theme Toggle
+    // ==========================================================================
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const STORAGE_KEY = 'theme';
+
+    const getPreferredTheme = () => {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        if (stored) return stored;
+        return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    };
+
+    const setTheme = (theme) => {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem(STORAGE_KEY, theme);
+    };
+
+    // Apply stored/preferred theme immediately, then allow transitions
+    setTheme(getPreferredTheme());
+    requestAnimationFrame(() => {
+        html.classList.remove('no-transition');
+    });
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+    }
+
+    // Sync if OS preference changes while page is open
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+        if (!localStorage.getItem(STORAGE_KEY)) {
+            setTheme(e.matches ? 'light' : 'dark');
+        }
+    });
+
+    // ==========================================================================
     // Mobile Navigation Menu Toggle
     // ==========================================================================
     const menuToggleBtn = document.getElementById('menu-toggle-btn');
