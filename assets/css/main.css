@@ -28,9 +28,24 @@ html {
     font-weight: 600;
     transition: top 0.2s ease;
 }
-.skip-link:focus {
+.skip-link:focus-visible {
     top: 0;
     outline: 2px solid var(--accent-blue, #3b82f6);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Focus Visible: Consistent focus ring for all interactive elements
+   ========================================================================== */
+.nav-link:focus-visible,
+.btn:focus-visible,
+.social-icon:focus-visible,
+.proj-link-icon:focus-visible,
+.pub-link:focus-visible,
+.email-btn:focus-visible,
+.menu-toggle:focus-visible,
+.logo:focus-visible {
+    outline: 2px solid var(--accent-blue);
     outline-offset: 2px;
 }
 

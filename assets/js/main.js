@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     menuToggleBtn.addEventListener('click', toggleMenu);
+    menuToggleBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMenu();
+        }
+    });
 
     navLinks.forEach(link => {
         link.addEventListener('click', closeMenu);
@@ -28,6 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', (e) => {
         if (!navMenu.contains(e.target) && !menuToggleBtn.contains(e.target)) {
             closeMenu();
+        }
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+            closeMenu();
+            menuToggleBtn.focus();
         }
     });
 
