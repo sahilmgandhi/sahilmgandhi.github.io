@@ -12,6 +12,41 @@ html {
     font-size: 16px;
 }
 
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 10000;
+    padding: 0.5rem 1rem;
+    background: var(--accent-blue, #3b82f6);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: top 0.2s ease;
+}
+.skip-link:focus {
+    top: 0;
+    outline: 2px solid var(--accent-blue, #3b82f6);
+    outline-offset: 2px;
+}
+
+/* Screen-reader only utility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 :root {
     /* Fonts */
     --font-sans: 'Inter', sans-serif;

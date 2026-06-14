@@ -7,13 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
 
     const toggleMenu = () => {
-        navMenu.classList.toggle('open');
+        const isOpen = navMenu.classList.toggle('open');
         menuToggleBtn.classList.toggle('active');
+        menuToggleBtn.setAttribute('aria-expanded', isOpen);
     };
 
     const closeMenu = () => {
         navMenu.classList.remove('open');
         menuToggleBtn.classList.remove('active');
+        menuToggleBtn.setAttribute('aria-expanded', 'false');
     };
 
     menuToggleBtn.addEventListener('click', toggleMenu);
@@ -46,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navigator.clipboard.writeText(email).then(() => {
                 // Visual feedback
                 copyEmailBtn.classList.add('copied');
+                copyEmailBtn.setAttribute('aria-expanded', 'true');
                 tooltip.textContent = 'Copied!';
                 
                 // Clear any existing timeout
@@ -54,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Reset tooltip after 2 seconds
                 copyTimeout = setTimeout(() => {
                     copyEmailBtn.classList.remove('copied');
+                    copyEmailBtn.setAttribute('aria-expanded', 'false');
                     tooltip.textContent = 'Copy Email';
                 }, 2000);
             }).catch(err => {
@@ -61,6 +65,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 tooltip.textContent = 'Failed to copy';
             });
         });
+    }
+
+    // ==========================================================================
+    // Lazy Loading IntersectionObserver Fallback (for browsers that don't
+    // support native loading="lazy")
+    // ==========================================================================
+    if ('IntersectionObserver' in window) {
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        if (lazyImages.length > 0) {
+            const imgObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        // If using data-src pattern in future, load it here
+                        imgObserver.unobserve(img);
+                    }
+                });
+            }, { rootMargin: '200px' });
+            lazyImages.forEach(img => imgObserver.observe(img));
+        }
     }
 
     // ==========================================================================
@@ -82,8 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (navLink) {
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                     navLink.classList.add('active');
+                    navLink.setAttribute('aria-current', 'page');
                 } else {
                     navLink.classList.remove('active');
+                    navLink.removeAttribute('aria-current');
                 }
             }
         });

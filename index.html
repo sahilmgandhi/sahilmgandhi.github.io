@@ -5,6 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sahil Gandhi | Software Engineer</title>
     <meta name="description" content="Portfolio of Sahil Gandhi, a Systems & Software Engineer specializing in distributed systems, databases, and voice AI.">
+    <!-- SEO Meta Tags -->
+    <link rel="canonical" href="https://www.sahilmgandhi.com/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0b0f19">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sahil Gandhi | Software Engineer">
+    <meta property="og:description" content="Portfolio of Sahil Gandhi, a Systems & Software Engineer specializing in distributed systems, databases, and voice AI.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sahilmgandhi.com/">
+    <meta property="og:image" content="https://www.sahilmgandhi.com/images/me.jpg">
+    <meta property="og:site_name" content="Sahil Gandhi">
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sahil Gandhi | Software Engineer">
+    <meta name="twitter:description" content="Portfolio of Sahil Gandhi, a Systems & Software Engineer specializing in distributed systems, databases, and voice AI.">
+    <meta name="twitter:image" content="https://www.sahilmgandhi.com/images/me.jpg">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sahil Gandhi",
+        "givenName": "Sahil",
+        "familyName": "Gandhi",
+        "jobTitle": "Staff Software Engineer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Sierra"
+        },
+        "url": "https://www.sahilmgandhi.com/",
+        "sameAs": [
+            "https://github.com/sahilmgandhi",
+            "https://linkedin.com/in/sahilmgandhi"
+        ],
+        "image": "https://www.sahilmgandhi.com/images/me.jpg",
+        "description": "Systems & Software Engineer specializing in distributed systems, databases, and voice AI.",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of California, Los Angeles"
+        }
+    }
+    </script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,14 +57,17 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body class="dark-theme">
+    <!-- Skip to main content (accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Header/Navigation -->
-    <header class="header" id="header">
+    <header class="header" id="header" role="banner">
         <div class="header-container container">
             <a href="#about" class="logo">
                 <span class="logo-accent">&lt;</span>Sahil Gandhi<span class="logo-accent"> /&gt;</span>
             </a>
             
-            <nav class="nav" id="nav-menu">
+            <nav class="nav" id="nav-menu" role="navigation" aria-label="Main Navigation">
                 <ul class="nav-list">
                     <li><a href="#about" class="nav-link active">About</a></li>
                     <li><a href="#patents" class="nav-link">Patents</a></li>
@@ -32,7 +77,7 @@
             </nav>
 
             <div class="header-actions">
-                <div class="menu-toggle" id="menu-toggle-btn">
+                <div class="menu-toggle" id="menu-toggle-btn" role="button" aria-label="Toggle Menu" aria-expanded="false" tabindex="0">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -42,9 +87,9 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content" role="main">
         <!-- Hero / About Section -->
-        <section id="about" class="hero section">
+        <section id="about" class="hero section" aria-label="About Me">
             <div class="hero-bg-glow"></div>
             <div class="hero-container container">
                 <div class="hero-content">
@@ -59,10 +104,10 @@
                     
                     <!-- Interactive Contact & Copy Email -->
                     <div class="email-copy-wrapper">
-                        <button class="email-btn" id="copy-email-btn">
+                        <button class="email-btn" id="copy-email-btn" aria-label="Copy email address" aria-expanded="false" aria-controls="copy-tooltip">
                             <i class="fa-regular fa-envelope"></i>
                             <span class="email-text">sahilmgandhi [at] gmail [dot] com</span>
-                            <span class="copy-tooltip" id="copy-tooltip">Copy Email</span>
+                            <span class="copy-tooltip" id="copy-tooltip" role="tooltip">Copy Email</span>
                         </button>
                     </div>
 
@@ -91,7 +136,7 @@
                 <div class="hero-image-wrapper">
                     <div class="profile-card">
                         <div class="profile-img-frame">
-                            <img src="images/me.jpg" alt="Sahil Gandhi" class="profile-img">
+                            <img src="images/me.jpg" alt="Sahil Gandhi" class="profile-img" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -99,17 +144,17 @@
         </section>
 
         <!-- Patents Section -->
-        <section id="patents" class="patents section section-bg">
+        <section id="patents" class="patents section section-bg" aria-labelledby="patents-title">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tagline">Intellectual Property</span>
-                    <h2 class="section-title">Patents</h2>
+                    <h2 class="section-title" id="patents-title">Patents</h2>
                     <p class="section-desc">Innovative solutions designed and patented during my work on cloud-native streaming and distributed infrastructure.</p>
                 </div>
 
                 <div class="patents-grid">
                     <!-- Patent 1 -->
-                    <div class="patent-card card">
+                    <div class="patent-card card" role="article">
                         <div class="patent-header">
                             <div class="patent-icon-wrapper">
                                 <i class="fa-solid fa-network-wired"></i>
@@ -127,7 +172,7 @@
                     </div>
 
                     <!-- Patent 2 -->
-                    <div class="patent-card card">
+                    <div class="patent-card card" role="article">
                         <div class="patent-header">
                             <div class="patent-icon-wrapper">
                                 <i class="fa-solid fa-clock-rotate-left"></i>
@@ -145,7 +190,7 @@
                     </div>
 
                     <!-- Patent 3 -->
-                    <div class="patent-card card">
+                    <div class="patent-card card" role="article">
                         <div class="patent-header">
                             <div class="patent-icon-wrapper">
                                 <i class="fa-solid fa-cloud-arrow-up"></i>
@@ -166,15 +211,15 @@
         </section>
 
         <!-- Research Section -->
-        <section id="research" class="research section">
+        <section id="research" class="research section" aria-labelledby="research-title">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tagline">Academic & Independent</span>
-                    <h2 class="section-title">Research & Publications</h2>
+                    <h2 class="section-title" id="research-title">Research & Publications</h2>
                     <p class="section-desc">Exploring the intersection of scalable data engines, stream reasoning, and database internals.</p>
                 </div>
 
-                <div class="research-intro card">
+                <div class="research-intro card" role="article">
                     <div class="ucla-banner">
                         <i class="fa-solid fa-graduation-cap ucla-icon"></i>
                         <div>
@@ -190,7 +235,7 @@
                         <h3 class="category-title"><i class="fa-solid fa-scroll"></i> Conference Publications</h3>
                         <div class="publications-list">
                             <!-- Pub 1 -->
-                            <div class="pub-card card">
+                            <div class="pub-card card" role="article">
                                 <span class="pub-venue">IJCAI 2019</span>
                                 <h4 class="pub-title">Learn Smart with Less - Building Better Online Decision Trees with Fewer Training Examples</h4>
                                 <p class="pub-authors">Ariyam Das, Jin Wang, Sahil M. Gandhi</p>
@@ -200,7 +245,7 @@
                             </div>
 
                             <!-- Pub 2 -->
-                            <div class="pub-card card">
+                            <div class="pub-card card" role="article">
                                 <span class="pub-venue">CIKM 2018</span>
                                 <h4 class="pub-title">ASTRO - A Datalog System for Advanced Stream Reasoning</h4>
                                 <p class="pub-authors">Ariyam Das, Sahil M. Gandhi, Carlo Zaniolo</p>
@@ -216,7 +261,7 @@
                         <h3 class="category-title"><i class="fa-solid fa-book-open"></i> Selected Whitepapers</h3>
                         <div class="publications-list">
                             <!-- Whitepaper 1 -->
-                            <div class="pub-card card">
+                            <div class="pub-card card" role="article">
                                 <span class="pub-venue">Database Systems</span>
                                 <h4 class="pub-title">Xldb - Execution Log DataBase</h4>
                                 <p class="pub-authors">Sahil M. Gandhi</p>
@@ -226,7 +271,7 @@
                             </div>
 
                             <!-- Whitepaper 2 -->
-                            <div class="pub-card card">
+                            <div class="pub-card card" role="article">
                                 <span class="pub-venue">IoT & Security</span>
                                 <h4 class="pub-title">IoTShark - Monitoring and Analyzing IoT Traffic</h4>
                                 <p class="pub-authors">Sahil M. Gandhi, Max Wang, Daniel Achee</p>
@@ -236,7 +281,7 @@
                             </div>
 
                             <!-- Whitepaper 3 -->
-                            <div class="pub-card card">
+                            <div class="pub-card card" role="article">
                                 <span class="pub-venue">Distributed Messaging</span>
                                 <h4 class="pub-title">SIKE: An Analysis of Serializing Interfaces in Kafka Experiments</h4>
                                 <p class="pub-authors">Sahil M. Gandhi, Kaushik Mahorker, Wenlong Xiong</p>
@@ -246,7 +291,7 @@
                             </div>
 
                             <!-- Whitepaper 4 -->
-                            <div class="pub-card card">
+                            <div class="pub-card card" role="article">
                                 <span class="pub-venue">High Performance Computing</span>
                                 <h4 class="pub-title">PKEG - Parallel Kernel Execution on GPUs</h4>
                                 <p class="pub-authors">Sahil M. Gandhi, Matthew Wong</p>
@@ -261,17 +306,17 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="projects section section-bg">
+        <section id="projects" class="projects section section-bg" aria-labelledby="projects-title">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tagline">Side Endeavors & Tools</span>
-                    <h2 class="section-title">Personal Projects</h2>
+                    <h2 class="section-title" id="projects-title">Personal Projects</h2>
                     <p class="section-desc">A selection of independent builds ranging from automated trading systems to hardware robots and Chrome extensions.</p>
                 </div>
 
                 <div class="projects-grid">
                     <!-- Project 1: Stock-Trader -->
-                    <div class="project-card card">
+                    <div class="project-card card" role="article">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                         </div>
@@ -289,7 +334,7 @@
                     </div>
 
                     <!-- Project 2: Prequel Error Codes -->
-                    <div class="project-card card">
+                    <div class="project-card card" role="article">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -310,7 +355,7 @@
                     </div>
 
                     <!-- Project 3: Micromouse -->
-                    <div class="project-card card">
+                    <div class="project-card card" role="article">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -331,7 +376,7 @@
                     </div>
 
                     <!-- Project 4: Trivia-Bot -->
-                    <div class="project-card card">
+                    <div class="project-card card" role="article">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -352,7 +397,7 @@
                     </div>
 
                     <!-- Project 5: Free Throw Classifier -->
-                    <div class="project-card card">
+                    <div class="project-card card" role="article">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -373,7 +418,7 @@
                     </div>
 
                     <!-- Project 6: Bruin Dining API -->
-                    <div class="project-card card">
+                    <div class="project-card card" role="article">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -395,7 +440,7 @@
                     </div>
 
                     <!-- Project 7: C.A.R.M. -->
-                    <div class="project-card card">
+                    <div class="project-card card" role="article">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
@@ -417,7 +462,7 @@
                     </div>
 
                     <!-- Project 8: REM.my -->
-                    <div class="project-card card">
+                    <div class="project-card card" role="article">
                         <div class="project-header">
                             <span class="status-pill status-completed">Completed</span>
                             <div class="project-links">
