@@ -566,7 +566,39 @@ body {
 
 .card-footer {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
+    align-items: center;
+}
+
+.patent-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.patent-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.2rem 0.45rem;
+    border: 1px solid var(--card-border);
+    border-radius: 2px;
+    background-color: var(--bg-primary);
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.patent-link:hover {
+    color: var(--accent-blue);
+    border-color: var(--accent-blue);
+}
+
+.patent-link i {
+    font-size: 0.65rem;
 }
 
 .patent-tag {
