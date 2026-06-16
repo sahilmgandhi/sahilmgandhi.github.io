@@ -23,7 +23,8 @@
     <meta name="twitter:image" content="https://www.sahilmgandhi.com/images/me.jpg">
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-    {
+    [
+      {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Sahil Gandhi",
@@ -31,21 +32,307 @@
         "familyName": "Gandhi",
         "jobTitle": "Staff Software Engineer",
         "worksFor": {
-            "@type": "Organization",
-            "name": "Sierra"
+          "@type": "Organization",
+          "name": "Sierra",
+          "url": "https://www.sierra.ai"
         },
         "url": "https://www.sahilmgandhi.com/",
         "sameAs": [
-            "https://github.com/sahilmgandhi",
-            "https://linkedin.com/in/sahilmgandhi"
+          "https://github.com/sahilmgandhi",
+          "https://linkedin.com/in/sahilmgandhi"
         ],
         "image": "https://www.sahilmgandhi.com/images/me.jpg",
         "description": "Systems & Software Engineer specializing in distributed systems, databases, and voice AI.",
+        "email": "mailto:sahilmgandhi@gmail.com",
+        "knowsAbout": [
+          "Distributed Systems",
+          "Database Systems",
+          "Voice AI",
+          "Stream Processing",
+          "Cloud Infrastructure",
+          "Software Engineering"
+        ],
         "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "University of California, Los Angeles"
-        }
-    }
+          "@type": "CollegeOrUniversity",
+          "name": "University of California, Los Angeles",
+          "url": "https://www.ucla.edu"
+        },
+        "hasOccupation": [
+          {
+            "@type": "Occupation",
+            "name": "Staff Software Engineer",
+            "occupationLocation": {
+              "@type": "Country",
+              "name": "United States"
+            },
+            "skills": [
+              "Distributed Systems",
+              "Database Internals",
+              "Voice AI",
+              "Cloud Infrastructure"
+            ]
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "Learn Smart with Less - Building Better Online Decision Trees with Fewer Training Examples",
+        "description": "Research on improving online decision-tree algorithms with fewer training examples.",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Ariyam Das"
+          },
+          {
+            "@type": "Person",
+            "name": "Jin Wang"
+          },
+          {
+            "@type": "Person",
+            "name": "Sahil Gandhi",
+            "url": "https://www.sahilmgandhi.com"
+          }
+        ],
+        "datePublished": "2019",
+        "publisher": {
+          "@type": "Organization",
+          "name": "IJCAI"
+        },
+        "url": "https://www.ijcai.org/proceedings/2019/0306.pdf",
+        "keywords": ["Machine Learning", "Decision Trees", "Online Learning"],
+        "about": "IJCAI 2019"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "ASTRO - A Datalog System for Advanced Stream Reasoning",
+        "description": "A Datalog-based system for advanced stream reasoning over data streams.",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Ariyam Das"
+          },
+          {
+            "@type": "Person",
+            "name": "Sahil Gandhi",
+            "url": "https://www.sahilmgandhi.com"
+          },
+          {
+            "@type": "Person",
+            "name": "Carlo Zaniolo"
+          }
+        ],
+        "datePublished": "2018",
+        "publisher": {
+          "@type": "Organization",
+          "name": "ACM"
+        },
+        "url": "https://dl.acm.org/citation.cfm?doid=3269206.3269223",
+        "keywords": ["Stream Reasoning", "Datalog", "Data Streams", "CIKM"],
+        "about": "CIKM 2018"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "Xldb - Execution Log DataBase",
+        "description": "A database system designed for efficient storage and querying of execution logs.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "datePublished": "2019",
+        "url": "https://www.sahilmgandhi.com/whitepapers/Xldb.pdf",
+        "keywords": ["Database Systems", "Execution Logs", "Query Processing"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "IoTShark - Monitoring and Analyzing IoT Traffic",
+        "description": "A system for monitoring and analyzing IoT network traffic for security and performance insights.",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Sahil Gandhi",
+            "url": "https://www.sahilmgandhi.com"
+          },
+          {
+            "@type": "Person",
+            "name": "Max Wang"
+          },
+          {
+            "@type": "Person",
+            "name": "Daniel Achee"
+          }
+        ],
+        "datePublished": "2018",
+        "url": "https://www.sahilmgandhi.com/whitepapers/IoTShark.pdf",
+        "keywords": ["IoT", "Network Monitoring", "Security", "Traffic Analysis"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "SIKE: An Analysis of Serializing Interfaces in Kafka Experiments",
+        "description": "An analysis of serialization interfaces and their performance impact in Apache Kafka experiments.",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Sahil Gandhi",
+            "url": "https://www.sahilmgandhi.com"
+          },
+          {
+            "@type": "Person",
+            "name": "Kaushik Mahorker"
+          },
+          {
+            "@type": "Person",
+            "name": "Wenlong Xiong"
+          }
+        ],
+        "datePublished": "2019",
+        "url": "https://www.sahilmgandhi.com/whitepapers/SIKE.pdf",
+        "keywords": ["Kafka", "Serialization", "Distributed Messaging", "Performance"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "name": "PKEG - Parallel Kernel Execution on GPUs",
+        "description": "A framework for parallel kernel execution on GPUs for high-performance computing workloads.",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Sahil Gandhi",
+            "url": "https://www.sahilmgandhi.com"
+          },
+          {
+            "@type": "Person",
+            "name": "Matthew Wong"
+          }
+        ],
+        "datePublished": "2018",
+        "url": "https://www.sahilmgandhi.com/whitepapers/PKEG.pdf",
+        "keywords": ["GPU Computing", "Parallel Processing", "High Performance Computing"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Project",
+        "name": "Stock-Trader",
+        "description": "An automated stock trading bot integrated with Alpaca API implementing custom quantitative trading strategies and backtesting pipelines.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "keywords": ["Python", "Alpaca API", "Quantitative Trading", "Backtesting"],
+        "about": "Automated stock trading system"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Prequel Error Codes",
+        "description": "A Chrome extension that turns standard HTTP error codes from various sites into fun Star Wars prequel memes instead.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome",
+        "url": "https://chrome.google.com/webstore/detail/prequelerrorcodes/cdjhhanfoilmkjidljiacahphcfgjbkc",
+        "downloadUrl": "https://chrome.google.com/webstore/detail/prequelerrorcodes/cdjhhanfoilmkjidljiacahphcfgjbkc",
+        "softwareVersion": "1.0",
+        "keywords": ["Chrome Extension", "HTTP Error Codes", "Star Wars", "Humor"]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Project",
+        "name": "Micromouse Robot",
+        "description": "An autonomous maze-solving robot designed from scratch with custom PCB, components, soldering, and programmed in C/C++. Won 1st at CAMM & UCR Regionals.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "url": "https://github.com/etank7000/Micromouse",
+        "keywords": ["C/C++", "Robotics", "PCB Design", "Embedded Systems"],
+        "about": "Autonomous maze-solving robot"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Project",
+        "name": "Trivia-Bot",
+        "description": "An automated Python-based assistant designed to parse and suggest answers for live mobile trivia apps like HQ Trivia and Beat the Q in real time.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "keywords": ["Python", "Web Scraping", "NLP", "Real-time Systems"],
+        "about": "Real-time trivia answer assistant"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Project",
+        "name": "Free Throw Classifier",
+        "description": "A real-time classifier that grades basketball free throws using Hexiwear wearables mounted on a player's arm streaming data to a central Raspberry Pi server.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "keywords": ["IoT", "Hexiwear", "Raspberry Pi", "Machine Learning", "Wearables"],
+        "about": "Real-time sports classification using IoT wearables"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Project",
+        "name": "Bruin Dining API",
+        "description": "A backend API that scrapes UCLA dining hall data, allowing third-party developers to access nutritional info. Equipped with an interactive GUI.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "url": "https://github.com/vanshg/BruinMenu-Backend",
+        "keywords": ["Python", "Web Scraping", "REST API", "UCLA"],
+        "about": "UCLA dining hall data API"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "C.A.R.M. Chat",
+        "description": "Communicating Across Random Masses - a Chrome extension allowing users on any website to dynamically chat with each other anonymously and instantly.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome",
+        "url": "https://chrome.google.com/webstore/detail/carm/gnepbnmmbmkipbdbclbekhklbbijmimf",
+        "downloadUrl": "https://chrome.google.com/webstore/detail/carm/gnepbnmmbmkipbdbclbekhklbbijmimf",
+        "keywords": ["Chrome Extension", "WebSockets", "Anonymous Chat", "Real-time"],
+        "about": "Anonymous real-time chat extension"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "REM.my Alarm",
+        "description": "A smart, minimalist Android alarm system that optimizes a user's sleep cycles and wake times around natural REM sleep phases.",
+        "author": {
+          "@type": "Person",
+          "name": "Sahil Gandhi",
+          "url": "https://www.sahilmgandhi.com"
+        },
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Android",
+        "url": "https://play.google.com/store/apps/details?id=com.sahilmgandhi.remmy",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.sahilmgandhi.remmy",
+        "keywords": ["Android", "Sleep Tracking", "REM Cycles", "Alarm", "Java"],
+        "about": "Smart alarm clock based on REM sleep cycles"
+      }
+    ]
     </script>
     <!-- Resource Hints -->
     <link rel="preload" href="images/me.jpg" as="image">
