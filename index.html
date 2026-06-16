@@ -850,6 +850,34 @@
         </div>
     </footer>
 
+    <!-- Project Detail Modal -->
+    <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close-btn" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-header">
+                    <span class="modal-status status-pill status-completed">Completed</span>
+                    <h3 class="modal-title" id="modal-title"></h3>
+                    <p class="modal-description"></p>
+                </div>
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Tech Stack</h4>
+                    <div class="modal-tags"></div>
+                </div>
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Links</h4>
+                    <div class="modal-links"></div>
+                </div>
+                <div class="modal-section">
+                    <h4 class="modal-section-title">Architecture Notes</h4>
+                    <div class="modal-architecture"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MHYKXKZXET"></script>
     <script>
